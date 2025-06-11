@@ -16,7 +16,7 @@
   --sauber: #01c00e;
   --text: #dee4ea;
 }
-.main {
+.body {
   margin: 0;
   display: flex;
   place-items: start;
@@ -27,6 +27,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
 }
+
 
 button {
   color: var(--text);
@@ -70,11 +71,11 @@ button {
 }
 #sidebar.close .navbutton {
   color: var(--background);
-  translate: -40px;
+  translate: -45px;
   transition: 300ms ease-in-out;
 }
 #sidebar.close #toggle-btn {
-  translate: -15px;
+  translate: -10px;
 }
 .rotate {
   svg {
@@ -98,6 +99,9 @@ button {
   align-items: center;
   gap: 1em;
 }
+#sidebar .logo-text:hover {
+  cursor: pointer;
+}
 
 .logo {
   font-weight: bold;
@@ -113,9 +117,15 @@ button {
   }
 }
 main {
-  padding: min(7px, 30%);
+  width: calc(100vw - 250px);
   margin-top: 5px;
   margin-bottom: 5px;
+  transition: all 300ms ease-in-out;
+  
+}
+
+main.close{
+  width: calc(100vw - 60px);
 }
 
 .container {
@@ -128,11 +138,16 @@ main {
     margin-top: 1em;
   }
 }
-
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  justify-content: center;
+  gap: 20px;
+}
 @media (max-width: 800px) {
-  #sidebar{
+  #sidebar {
     position: fixed;
-    top:unset;
+    top: unset;
     bottom: 0;
     height: 60px;
     width: 100%;
@@ -145,27 +160,34 @@ main {
       grid-auto-flow: column;
       justify-content: center;
     }
-    ul li{
+    ul li {
       height: 100%;
     }
-    ul li.navbutton{
+    ul li.navbutton {
       height: 100%;
       width: 60px;
-    
-      span{display: none;}
 
+      span {
+        display: none;
+      }
     }
-    ul li.logo{
+    ul li.logo {
       display: none;
     }
-
   }
-  
+
   .main {
     grid-template-columns: 1fr;
+  }
+  main{
+    width: 100vw;
   }
   .container {
     border: none;
     padding: 0;
   }
+}
+
+.box {
+  background-color: var(--accent);
 }

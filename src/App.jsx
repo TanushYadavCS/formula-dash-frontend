@@ -1,16 +1,17 @@
 import { use, useState } from "react";
 import "./App.css";
-const toggleButton = document.getElementById('toggle-btn');
-const sidebar = document.getElementById('sidebar');
-function handleToggle(){
-  toggleButton.classList.toggle('rotate');
-  sidebar.classList.toggle('close');
-
+function handleToggle() {
+  const toggleButton = document.getElementById("toggle-btn");
+  const sidebar = document.getElementById("sidebar");
+  const content = document.getElementById("content");
+  toggleButton.classList.toggle("rotate");
+  sidebar.classList.toggle("close");
+  content.classList.toggle("close");
 }
 function App() {
   return (
-    <div className="main">
-      <nav id="sidebar">
+    <div className="body">
+      <nav id="sidebar" className="">
         <ul>
           <li className="logo">
             <span className="logo-text">
@@ -103,87 +104,16 @@ function App() {
           </li>
         </ul>
       </nav>
-      <main>
-        <div className="container">
-          <h2>Example Heading</h2>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
-            velit, id ut nemo voluptas minus, deleniti commodi reiciendis,
-            nesciunt corporis dolorum? Officia non ullam, odio, quod atque,
-            dicta sapiente obcaecati similique modi doloribus quaerat hic
-            pariatur aliquid ad accusantium repellendus! Pariatur dolore modi
-            voluptates, vero eaque minima enim beatae! Eius inventore eligendi
-            illum assumenda quis, ab ut dolor voluptatibus, atque saepe
-            reiciendis reprehenderit maxime ex nesciunt aliquid? Nobis dicta,
-            iusto omnis cupiditate aspernatur praesentium? Nam esse facilis
-            accusantium praesentium obcaecati!
-          </p>
-        </div>
-        <div className="container">
-          <h2>Another Example Heading</h2>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
-            velit, id ut nemo voluptas minus, deleniti commodi reiciendis,
-            nesciunt corporis dolorum? Officia non ullam, odio, quod atque,
-            dicta sapiente obcaecati similique modi doloribus quaerat hic
-            pariatur aliquid ad accusantium repellendus! Pariatur dolore modi
-            voluptates, vero eaque minima enim beatae! Eius inventore eligendi
-            illum assumenda quis, ab ut dolor voluptatibus, atque saepe
-            reiciendis reprehenderit maxime ex nesciunt aliquid? Nobis dicta,
-            iusto omnis cupiditate aspernatur praesentium? Nam esse facilis
-            accusantium praesentium obcaecati!
-          </p>
-        </div>
-        <div className="container">
-          <h2>Yet Another Example Heading</h2>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
-            velit, id ut nemo voluptas minus, deleniti commodi reiciendis,
-            nesciunt corporis dolorum? Officia non ullam, odio, quod atque,
-            dicta sapiente obcaecati similique modi doloribus quaerat hic
-            pariatur aliquid ad accusantium repellendus! Pariatur dolore modi
-            voluptates, vero eaque minima enim beatae! Eius inventore eligendi
-            illum assumenda quis, ab ut dolor voluptatibus, atque saepe
-            reiciendis reprehenderit maxime ex nesciunt aliquid? Nobis dicta,
-            iusto omnis cupiditate aspernatur praesentium? Nam esse facilis
-            accusantium praesentium obcaecati! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Nam consectetur amet quidem cum
-            laborum sunt. Molestias asperiores assumenda dignissimos quis non
-            fugiat eaque quasi tenetur amet est ut beatae recusandae vel odit
-            enim quaerat sed eveniet, facere iusto nisi consequuntur quae.
-            Deserunt consequatur repellendus dicta aliquid facilis nulla,
-            quisquam sit alias reiciendis recusandae repudiandae vero quae sed
-            dignissimos ratione consequuntur saepe! Quae libero eius porro
-            veritatis quo atque, vitae voluptate, ab corrupti dolores neque sit
-            cupiditate nihil sapiente unde minus est enim quasi aperiam
-            perspiciatis debitis nobis eum. Repellendus, doloremque! Possimus
-            animi aspernatur illo corrupti iusto architecto sequi dolore ab!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            similique quos inventore cupiditate, vero nihil modi dolorem,
-            debitis dolor placeat reprehenderit ipsam corrupti labore a
-            exercitationem! Quaerat cum provident excepturi incidunt enim natus
-            fuga error aut maiores explicabo perspiciatis suscipit dolore
-            cumque, nulla nemo atque rem. Velit repellendus itaque illum magni
-            saepe ex tenetur, nemo pariatur cupiditate rem? Mollitia nobis iusto
-            praesentium necessitatibus soluta sequi temporibus ducimus aut.
-            Expedita consequatur ad dolorum assumenda et recusandae. Atque neque
-            et voluptatibus animi rem, ipsa possimus maxime, autem quisquam
-            aperiam enim consequatur cupiditate soluta odit perspiciatis velit
-            officia laudantium corporis? Odit laboriosam deleniti dignissimos,
-            qui, nihil corrupti similique quae illum nobis dicta sequi?
-            Provident inventore dolorum voluptatem voluptatum sequi perspiciatis
-            blanditiis sit officiis delectus cum. Deserunt neque possimus
-            dolores accusamus temporibus similique quibusdam quod debitis saepe
-            officiis ipsa laborum id laboriosam nostrum ex nam porro iusto
-            placeat, obcaecati molestiae molestias? Hic accusantium alias fuga
-            delectus maiores! Fugit tenetur velit exercitationem ad debitis
-            architecto dolore voluptas possimus labore repellendus explicabo
-            optio eius alias sunt consectetur dolorem hic deleniti similique,
-            libero nemo, excepturi nam nobis voluptates rerum. Perspiciatis
-            vitae voluptate, aliquam aut voluptates deserunt deleniti architecto
-            quibusdam impedit doloribus iste ex iure ducimus, repellendus
-            officiis.
-          </p>
+      <main id="content" className="">
+        <div className="grid-container">
+          <div className="box">TEST</div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box">TEST</div>
+          <div className="box"></div>
         </div>
       </main>
     </div>
