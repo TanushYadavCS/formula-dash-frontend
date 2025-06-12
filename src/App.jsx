@@ -107,14 +107,14 @@ function App() {
       </nav>
       <main id="content" className="">
         <div className="grid-container">
-          <div className="box" style={{gridArea: "currentWeek"}}></div>
+          <div className="box" style={{gridArea: "currentWeek"}}><CurrentWeek /></div>
           <div className="box" style={{gridArea: "schedule"}}></div>
           <div className="box" style={{gridArea: "wdc"}}></div>
           <div className="box" style={{gridArea: "wcc"}}></div>
           <div className="box" style={{gridArea: "lastSession"}}></div>
           <div className="box" style={{gridArea: "calendar"}}></div>
           <div className="box" style={{gridArea: "countdown"}}></div>
-          <div className="box" style={{gridArea: "lapsCompleted"}}></div>
+          <div className="box" style={{gridArea: "weather"}}></div>
           <div className="box" style={{gridArea: "podium"}}></div>
           <div className="box" style={{gridArea: "circuitInfo"}}></div>
         </div>

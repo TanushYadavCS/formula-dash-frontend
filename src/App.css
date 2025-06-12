@@ -15,7 +15,15 @@
   --alpine: #00a1e8;
   --sauber: #01c00e;
   --text: #dee4ea;
+  --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+  --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+  --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+  --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+  --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+  --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+  --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 }
+
 .body {
   margin: 0;
   display: flex;
@@ -107,8 +115,12 @@ button {
 #sidebar .logo-text:hover {
   cursor: pointer;
 }
+#sidebar button{
+  font-size: var(--fs-sm);
+}
 
 .logo {
+  font-size: var(--fs-base);
   font-weight: bold;
   .secondary {
     color: var(--accent);
@@ -148,10 +160,11 @@ main.close {
   margin-bottom: 100px;
   grid-template-columns: 275px 275px 275px 275px 275px;
   grid-template-rows: 275px 275px 275px 275px;
-  grid-template-areas: "currentWeek schedule calendar lastSession podium"
-                       "lapsCompleted schedule calendar lastSession circuitInfo"
-                       "wdc wdc wcc wcc circuitInfo"
-                       "wdc wdc wcc wcc countdown";
+  grid-template-areas:
+    "currentWeek schedule calendar lastSession podium"
+    "weather schedule calendar lastSession circuitInfo"
+    "wdc wdc wcc wcc circuitInfo"
+    "wdc wdc wcc wcc countdown";
   justify-content: center;
   gap: 15px;
 }
@@ -160,99 +173,94 @@ main.close {
   background-color: var(--primary);
   border-radius: 25px;
 }
-
-@media (min-width: 1240px) and (max-width:1758px){
-  .grid-container{
-    grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 300px 300px 300px 300px 300px;
+@media (min-width: 3000px) {
+  .grid-container {
+    padding: 20px;
+    display: grid;
+    margin-bottom: 100px;
+    grid-template-columns: 500px 500px 500px 500px 500px;
+    grid-template-rows: 500px 500px 500px 500px;
+    grid-template-areas:
+      "currentWeek schedule calendar lastSession podium"
+      "weather schedule calendar lastSession circuitInfo"
+      "wdc wdc wcc wcc circuitInfo"
+      "wdc wdc wcc wcc countdown";
+    justify-content: center;
     gap: 15px;
-    grid-template-areas: "currentWeek schedule circuitInfo"
-                         "calendar schedule circuitInfo"
-                         "calendar lapsCompleted countdown"
-                         "wdc podium wcc"
-                         "wdc lastSession wcc";
   }
 }
 
-@media (min-width:1016.5px) and (max-width: 1239.5px) {
-  .grid-container{
+@media (min-width: 1481px) and (max-width: 1758px) {
+  .grid-container {
+    padding: 20px;
+    display: grid;
     margin-bottom: 100px;
-    grid-template-columns: 350px 350px;
-    grid-template-rows: 350px 350px 350px 350px 350px 350px 350px;
-    gap: 10px;
-    grid-template-areas: "  currentWeek   countdown   "
-                         "  schedule   calendar   "
-                         "  schedule   lapsCompleted   "
-                         "  wdc   wdc   "
-                         "  wcc   wcc   "
-                         "  lastSession   podium   "
-                         "  lastSession   circuitInfo   ";
+    grid-template-columns: 225px 225px 225px 225px 225px;
+    grid-template-rows: 225px 225px 225px 225px;
+    grid-template-areas:
+      "currentWeek schedule calendar lastSession podium"
+      "weather schedule calendar lastSession circuitInfo"
+      "wdc wdc wcc wcc circuitInfo"
+      "wdc wdc wcc wcc countdown";
+    justify-content: center;
+    gap: 15px;
   }
 }
 
-@media (min-width:908.5px) and (max-width: 1016.5px) {
-  .grid-container{
+@media (min-width: 1354px) and (max-width: 1480px) {
+  .grid-container {
+    padding: 20px;
+    display: grid;
     margin-bottom: 100px;
-    grid-template-columns: 300px 300px;
-    grid-template-rows: 300px 300px 300px 300px 300px 300px 300px;
-    gap: 10px;
-    grid-template-areas: "  currentWeek   countdown   "
-                         "  schedule   calendar   "
-                         "  schedule   lapsCompleted   "
-                         "  wdc   wdc   "
-                         "  wcc   wcc   "
-                         "  lastSession   podium   "
-                         "  lastSession   circuitInfo   ";
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-areas:
+      "currentWeek schedule calendar lastSession podium"
+      "weather schedule calendar lastSession circuitInfo"
+      "wdc wdc wcc wcc circuitInfo"
+      "wdc wdc wcc wcc countdown";
+    justify-content: center;
+    gap: 15px;
   }
-}
-@media (min-width: 800.5px) and (max-width: 908px) {
-  
-  .grid-container{
-    margin-bottom: 100px;
-    grid-template-columns: 240px 240px;
-    grid-template-rows: 240px 240px 240px 240px 240px 240px 240px;
-    gap: 10px;
-    grid-template-areas: "  currentWeek   countdown   "
-                         "  schedule   calendar   "
-                         "  schedule   lapsCompleted   "
-                         "  wdc   wdc   "
-                         "  wcc   wcc   "
-                         "  lastSession   podium   "
-                         "  lastSession   circuitInfo   ";
-  }
-}
 
-@media (min-width:733.5px) and (max-width: 800px) {
-  .grid-container{
-    margin-bottom: 100px;
-    grid-template-columns: 210px 210px;
-    grid-template-rows: 210px 210px 210px 210px 210px 210px 210px;
-    gap: 10px;
-    grid-template-areas: "  currentWeek   countdown   "
-                         "  schedule   calendar   "
-                         "  schedule   lapsCompleted   "
-                         "  wdc   wdc   "
-                         "  wcc   wcc   "
-                         "  lastSession   podium   "
-                         "  lastSession   circuitInfo   ";
-  }
 }
-@media (min-width:662px) and (max-width: 733px) {
-  .grid-container{
+@media (min-width: 1140px) and (max-width: 1353px) {
+  .grid-container {
+    padding: 20px;
+    display: grid;
     margin-bottom: 100px;
-    grid-template-columns: 180px 180px;
-    grid-template-rows: 180px 180px 180px 180px 180px 180px 180px;
-    gap: 10px;
-    grid-template-areas: "  currentWeek   countdown   "
-                         "  schedule   calendar   "
-                         "  schedule   lapsCompleted   "
-                         "  wdc   wdc   "
-                         "  wcc   wcc   "
-                         "  lastSession   podium   "
-                         "  lastSession   circuitInfo   ";
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px 200px 200px;
+    grid-template-areas:
+      "currentWeek schedule calendar lastSession"
+      "weather schedule calendar lastSession"
+      "podium countdown circuitInfo circuitInfo"
+      "wdc wdc wcc wcc "
+      "wdc wdc wcc wcc ";
+    justify-content: center;
+    gap: 15px;
   }
+
 }
-@media (min-width:409px) and (max-width: 661.5px) {
+@media (min-width: 989px) and (max-width: 1139px) {
+  .grid-container {
+    padding: 20px;
+    display: grid;
+    margin-bottom: 100px;
+    grid-template-columns: 225px 225px 225px;
+    grid-template-rows: 225px 225px 225px 225px 225px;
+    grid-template-areas:
+      "currentWeek schedule calendar"
+      "weather schedule calendar"
+      "podium circuitInfo lastSession"
+      "wdc wcc lastSession"
+      "wdc wcc countdown";
+    justify-content: center;
+    gap: 15px;
+  }
+
+}
+@media (min-width: 825px) and (max-width: 988px) {
   #sidebar {
     position: fixed;
     top: unset;
@@ -294,22 +302,24 @@ main.close {
     border: none;
     padding: 0;
   }
-  .grid-container{
+  .grid-container {
+    padding: 20px;
+    display: grid;
     margin-bottom: 100px;
-    grid-template-columns: 180px 180px;
-    grid-template-rows: 180px 180px 180px 180px 180px 180px 180px;
-    gap: 10px;
-    grid-template-areas: "  currentWeek   countdown   "
-                         "  schedule   calendar   "
-                         "  schedule   lapsCompleted   "
-                         "  wdc   wdc   "
-                         "  wcc   wcc   "
-                         "  lastSession   podium   "
-                         "  lastSession   circuitInfo   ";
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 250px 250px 250px 250px 250px;
+    grid-template-areas:
+      "currentWeek schedule calendar"
+      "weather schedule calendar"
+      "podium circuitInfo lastSession"
+      "wdc wcc lastSession"
+      "wdc wcc countdown";
+    justify-content: center;
+    gap: 15px;
   }
-}
 
-@media (max-width: 408.5px) {
+}
+@media (min-width: 669px) and (max-width: 824px) {
   #sidebar {
     position: fixed;
     top: unset;
@@ -351,75 +361,264 @@ main.close {
     border: none;
     padding: 0;
   }
-  .grid-container{
+  .grid-container {
+    padding: 20px;
+    display: grid;
     margin-bottom: 100px;
-    grid-template-columns: 150px 150px;
-    grid-template-rows: 150px 150px 150px 150px 150px 150px 150px;
-    gap: 10px;
-    grid-template-areas: "  currentWeek   countdown   "
-                         "  schedule   calendar   "
-                         "  schedule   lapsCompleted   "
-                         "  wdc   wdc   "
-                         "  wcc   wcc   "
-                         "  lastSession   podium   "
-                         "  lastSession   circuitInfo   ";
-  }}
-  @media (max-width: 408px) {
-    #sidebar {
-      position: fixed;
-      top: unset;
-      bottom: 0;
-      height: 60px;
-      width: 100%;
-      align-content: center;
-  
-      ul {
-        padding: 0;
-        display: grid;
-        grid-auto-columns: 60px;
-        grid-auto-flow: column;
-        justify-content: center;
-      }
-      ul li {
-        height: 100%;
-      }
-      ul li.navbutton {
-        height: 100%;
-        width: 60px;
-  
-        span {
-          display: none;
-        }
-      }
-      ul li.logo {
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px 200px 200px;
+    grid-template-areas:
+      "currentWeek schedule calendar"
+      "weather schedule calendar"
+      "podium circuitInfo lastSession"
+      "wdc wcc lastSession"
+      "wdc wcc countdown";
+    justify-content: center;
+    gap: 15px;
+  }
+
+}
+@media (min-width: 558px) and (max-width: 668px) {
+  #sidebar {
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    align-content: center;
+
+    ul {
+      padding: 0;
+      display: grid;
+      grid-auto-columns: 60px;
+      grid-auto-flow: column;
+      justify-content: center;
+    }
+    ul li {
+      height: 100%;
+    }
+    ul li.navbutton {
+      height: 100%;
+      width: 60px;
+
+      span {
         display: none;
       }
     }
-  
-    .main {
-      grid-template-columns: 1fr;
+    ul li.logo {
+      display: none;
     }
-    main {
-      width: 100vw;
-    }
-    .container {
-      border: none;
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+  }
+  main {
+    width: 100vw;
+  }
+  .container {
+    border: none;
+    padding: 0;
+  }
+  .grid-container {
+    padding: 20px;
+    display: grid;
+    margin-bottom: 100px;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 250px 250px 250px 250px 250px 250px 250px;
+    grid-template-areas:
+      "currentWeek schedule"
+      "weather schedule "
+      "podium circuitInfo"
+      "lastSession countdown"
+      "lastSession calendar"
+      "wdc wcc "
+      "wdc wcc ";
+    justify-content: center;
+    gap: 15px;
+  }
+
+}
+@media (min-width: 450px) and (max-width: 557px) {
+  #sidebar {
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    align-content: center;
+
+    ul {
       padding: 0;
+      display: grid;
+      grid-auto-columns: 60px;
+      grid-auto-flow: column;
+      justify-content: center;
     }
-    .grid-container{
-      margin-bottom: 100px;
-      grid-template-columns: 135px 135px;
-      grid-template-rows: 135px 135px 135px 135px 135px 135px 135px;
-      gap: 10px;
-      grid-template-areas: "  currentWeek   countdown   "
-                           "  schedule   calendar   "
-                           "  schedule   lapsCompleted   "
-                           "  wdc   wdc   "
-                           "  wcc   wcc   "
-                           "  lastSession   podium   "
-                           "  lastSession   circuitInfo   ";
-    }}
+    ul li {
+      height: 100%;
+    }
+    ul li.navbutton {
+      height: 100%;
+      width: 60px;
 
+      span {
+        display: none;
+      }
+    }
+    ul li.logo {
+      display: none;
+    }
+  }
 
+  .main {
+    grid-template-columns: 1fr;
+  }
+  main {
+    width: 100vw;
+  }
+  .container {
+    border: none;
+    padding: 0;
+  }
+  .grid-container {
+    padding: 20px;
+    display: grid;
+    margin-bottom: 100px;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px 200px 200px 200px 200px 200px;
+    grid-template-areas:
+      "currentWeek schedule"
+      "weather schedule "
+      "podium circuitInfo"
+      "lastSession countdown"
+      "lastSession calendar"
+      "wdc wcc "
+      "wdc wcc ";
+    justify-content: center;
+    gap: 15px;
+  }
 
+}
+@media (min-width: 381px) and (max-width: 449px) {
+  #sidebar {
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    align-content: center;
 
+    ul {
+      padding: 0;
+      display: grid;
+      grid-auto-columns: 60px;
+      grid-auto-flow: column;
+      justify-content: center;
+    }
+    ul li {
+      height: 100%;
+    }
+    ul li.navbutton {
+      height: 100%;
+      width: 60px;
+
+      span {
+        display: none;
+      }
+    }
+    ul li.logo {
+      display: none;
+    }
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+  }
+  main {
+    width: 100vw;
+  }
+  .container {
+    border: none;
+    padding: 0;
+  }
+  .grid-container {
+    padding: 20px;
+    display: grid;
+    margin-bottom: 100px;
+    grid-template-columns: 170px 170px;
+    grid-template-rows: 170px 170px 170px 170px 170px 170px 170px;
+    grid-template-areas:
+      "currentWeek schedule"
+      "weather schedule "
+      "podium circuitInfo"
+      "lastSession countdown"
+      "lastSession calendar"
+      "wdc wcc "
+      "wdc wcc ";
+    justify-content: center;
+    gap: 15px;
+  }
+
+}
+@media (max-width: 380px) {
+  #sidebar {
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    align-content: center;
+
+    ul {
+      padding: 0;
+      display: grid;
+      grid-auto-columns: 60px;
+      grid-auto-flow: column;
+      justify-content: center;
+    }
+    ul li {
+      height: 100%;
+    }
+    ul li.navbutton {
+      height: 100%;
+      width: 60px;
+
+      span {
+        display: none;
+      }
+    }
+    ul li.logo {
+      display: none;
+    }
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+  }
+  main {
+    width: 100vw;
+  }
+  .container {
+    border: none;
+    padding: 0;
+  }
+  .grid-container {
+    padding: 20px;
+    display: grid;
+    margin-bottom: 100px;
+    grid-template-columns: 140px 140px;
+    grid-template-rows: 140px 140px 140px 140px 140px 140px 140px;
+    grid-template-areas:
+      "currentWeek schedule"
+      "weather schedule "
+      "podium circuitInfo"
+      "lastSession countdown"
+      "lastSession calendar"
+      "wdc wcc "
+      "wdc wcc ";
+    justify-content: center;
+    gap: 15px;
+  }
+
+}
