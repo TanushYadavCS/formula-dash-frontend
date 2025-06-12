@@ -1,6 +1,7 @@
 import { use, useState } from "react";
 import "./App.css";
 import CurrentWeek from "./Components/CurrentWeek";
+import Schedule from "./Components/Schedule";
 function handleToggle() {
   const toggleButton = document.getElementById("toggle-btn");
   const sidebar = document.getElementById("sidebar");
@@ -108,7 +109,7 @@ function App() {
       <main id="content" className="">
         <div className="grid-container">
           <div className="box" style={{gridArea: "currentWeek"}}><CurrentWeek /></div>
-          <div className="box" style={{gridArea: "schedule"}}></div>
+          <div className="box" style={{gridArea: "schedule"}}><Schedule /></div>
           <div className="box" style={{gridArea: "wdc"}}></div>
           <div className="box" style={{gridArea: "wcc"}}></div>
           <div className="box" style={{gridArea: "lastSession"}}></div>

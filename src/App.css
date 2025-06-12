@@ -1,4 +1,5 @@
 :root {
+  --dark-accent: #981912;
   --accent: #f44336;
   --background: #050506;
   --primary: #161a1d;
@@ -15,13 +16,6 @@
   --alpine: #00a1e8;
   --sauber: #01c00e;
   --text: #dee4ea;
-  --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
-  --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
-  --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
-  --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
-  --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
-  --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
-  --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 }
 
 .body {
@@ -120,7 +114,6 @@ button {
 }
 
 .logo {
-  font-size: var(--fs-base);
   font-weight: bold;
   .secondary {
     color: var(--accent);
@@ -167,28 +160,14 @@ main.close {
     "wdc wdc wcc wcc countdown";
   justify-content: center;
   gap: 15px;
+  font-size: 18px;
 }
 
 .box {
-  background-color: var(--primary);
+  
   border-radius: 25px;
 }
-@media (min-width: 3000px) {
-  .grid-container {
-    padding: 20px;
-    display: grid;
-    margin-bottom: 100px;
-    grid-template-columns: 500px 500px 500px 500px 500px;
-    grid-template-rows: 500px 500px 500px 500px;
-    grid-template-areas:
-      "currentWeek schedule calendar lastSession podium"
-      "weather schedule calendar lastSession circuitInfo"
-      "wdc wdc wcc wcc circuitInfo"
-      "wdc wdc wcc wcc countdown";
-    justify-content: center;
-    gap: 15px;
-  }
-}
+
 
 @media (min-width: 1481px) and (max-width: 1758px) {
   .grid-container {
@@ -221,6 +200,7 @@ main.close {
       "wdc wdc wcc wcc countdown";
     justify-content: center;
     gap: 15px;
+    font-size: 16px;
   }
 
 }
@@ -239,6 +219,7 @@ main.close {
       "wdc wdc wcc wcc ";
     justify-content: center;
     gap: 15px;
+    font-size: 15px;
   }
 
 }
@@ -316,6 +297,7 @@ main.close {
       "wdc wcc countdown";
     justify-content: center;
     gap: 15px;
+    font-size: 18px;
   }
 
 }
@@ -375,6 +357,7 @@ main.close {
       "wdc wcc countdown";
     justify-content: center;
     gap: 15px;
+    font-size: 15px;
   }
 
 }
@@ -436,6 +419,7 @@ main.close {
       "wdc wcc ";
     justify-content: center;
     gap: 15px;
+    font-size: 15px;
   }
 
 }
@@ -497,6 +481,7 @@ main.close {
       "wdc wcc ";
     justify-content: center;
     gap: 15px;
+    font-size: 16px;
   }
 
 }
@@ -558,6 +543,7 @@ main.close {
       "wdc wcc ";
     justify-content: center;
     gap: 15px;
+    font-size: 14px;
   }
 
 }
@@ -619,6 +605,7 @@ main.close {
       "wdc wcc ";
     justify-content: center;
     gap: 15px;
+    font-size: 11px;
   }
 
 }

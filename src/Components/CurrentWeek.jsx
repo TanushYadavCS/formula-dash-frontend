@@ -10,11 +10,10 @@ export default function CurrentWeek() {
   }, []);
   if (!currentRace) return "Error";
   return (
-    <div className="content">
-      <div className="header">Round {currentRace.round}</div>
-      <div className="name">{currentRace.name}</div>
-      <div className="trackMap"></div>
-      <div className="circuit">{currentRace.circuit}</div>
+    <div className="cw_content">
+         <div className="cw_name">{currentRace.name} <span className="cw_accentText">GP</span></div>
+    <div className="cw_trackMap"><img className="cw_map" src={currentRace.map} /></div>
+      <div className="cw_circuit">{currentRace.circuit}</div>
     </div>
   );
 }

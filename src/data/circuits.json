@@ -1,8 +1,8 @@
 [
   {
     "round": 1,
-    "name": "Australian Grand Prix",
-    "circuit": "Albert Park Grand Prix Circuit",
+    "name": "Australian",
+    "circuit": "Albert Park Circuit",
     "map": "circuit_assets/australia.svg",
     "flag_path": "flag_assets/au.svg",
     "weekend_type": "normal",
@@ -16,7 +16,7 @@
   },
   {
     "round": 2,
-    "name": "Chinese Grand Prix",
+    "name": "Chinese",
     "circuit": "Shanghai International Circuit",
     "map": "circuit_assets/china.svg",
     "flag_path": "flag_assets/cn.svg",
@@ -30,7 +30,7 @@
     }
   },
   { "round": 3,
-    "name": "Japanese Grand Prix",
+    "name": "Japanese",
     "circuit": "Suzuka Circuit",
     "map": "circuit_assets/japan.svg",
     "flag_path": "flag_assets/jp.svg",
@@ -44,7 +44,7 @@
     }
   },
   { "round": 4,
-    "name": "Bahrain Grand Prix",
+    "name": "Bahrain",
     "circuit": "Bahrain International Circuit",
     "map": "circuit_assets/bahrain.svg",
     "flag_path": "flag_assets/bh.svg",
@@ -58,7 +58,7 @@
     }
   },
   { "round": 5,
-    "name": "Saudi Arabian Grand Prix",
+    "name": "Saudi Arabian",
     "circuit": "Jeddah Corniche Circuit",
     "map": "circuit_assets/saudi_arabia.svg",
     "flag_path": "flag_assets/sa.svg",
@@ -72,7 +72,7 @@
     }
   },
   { "round": 6,
-    "name": "Miami Grand Prix",
+    "name": "Miami",
     "circuit": "Miami International Autodrome",
     "map": "circuit_assets/miami.svg",
     "flag_path": "flag_assets/us.svg",
@@ -86,7 +86,7 @@
     }
   },
   { "round": 7,
-    "name": "Emilia-Romagna Grand Prix",
+    "name": "Emilia-Romagna",
     "circuit": "Autodromo Internazionale Enzo e Dino Ferrari",
     "map": "circuit_assets/imola.svg",
     "flag_path": "flag_assets/it.svg",
@@ -100,7 +100,7 @@
     }
   },
   { "round": 8,
-    "name": "Monaco Grand Prix",
+    "name": "Monaco",
     "circuit": "Circuit de Monaco",
     "map": "circuit_assets/monaco.svg",
     "flag_path": "flag_assets/mc.svg",
@@ -114,7 +114,7 @@
     }
   },
   { "round": 9,
-    "name": "Spanish Grand Prix",
+    "name": "Spanish",
     "circuit": "Circuit de Barcelona-Catalunya",
     "map": "circuit_assets/spain.svg",
     "flag_path": "flag_assets/es.svg",
@@ -128,7 +128,7 @@
     }
   },
   { "round": 10,
-    "name": "Canadian Grand Prix",
+    "name": "Canadian",
     "circuit": "Circuit Gilles-Villeneuve",
     "map": "circuit_assets/canada.svg",
     "flag_path": "flag_assets/ca.svg",
@@ -142,7 +142,7 @@
     }
   },
   { "round": 11,
-    "name": "Austrian Grand Prix",
+    "name": "Austrian",
     "circuit": "Red Bull Ring",
     "map": "circuit_assets/austria.svg",
     "flag_path": "flag_assets/at.svg",
@@ -156,7 +156,7 @@
     }
   },
   { "round": 12,
-    "name": "British Grand Prix",
+    "name": "British",
     "circuit": "Silverstone Circuit",
     "map": "circuit_assets/great_britain.svg",
     "flag_path": "flag_assets/gb.svg",
@@ -170,7 +170,7 @@
     }
   },
   { "round": 13,
-    "name": "Belgian Grand Prix",
+    "name": "Belgian",
     "circuit": "Circuit de Spa-Francorchamps",
     "map": "circuit_assets/belgium.svg",
     "flag_path": "flag_assets/be.svg",
@@ -184,7 +184,7 @@
     }
   },
   { "round": 14,
-    "name": "Hungarian Grand Prix",
+    "name": "Hungarian",
     "circuit": "Hungaroring",
     "map": "circuit_assets/hungary.svg",
     "flag_path": "flag_assets/hu.svg",
@@ -198,7 +198,7 @@
     }
   },
   { "round": 15,
-    "name": "Dutch Grand Prix",
+    "name": "Dutch",
     "circuit": "Circuit Zandvoort",
     "map": "circuit_assets/netherlands.svg",
     "flag_path": "flag_assets/nl.svg",
@@ -212,7 +212,7 @@
     }
   },
   { "round": 16,
-    "name": "Italian Grand Prix",
+    "name": "Italian",
     "circuit": "Autodromo Nazionale Monza",
     "map": "circuit_assets/italy.svg",
     "flag_path": "flag_assets/it.svg",
@@ -226,7 +226,7 @@
     }
   },
   { "round": 17,
-    "name": "Azerbaijan Grand Prix",
+    "name": "Azerbaijan",
     "circuit": "Baku City Circuit",
     "map": "circuit_assets/azerbaijan.svg",
     "flag_path": "flag_assets/az.svg",
@@ -240,7 +240,7 @@
     }
   },
   { "round": 18,
-    "name": "Singapore Grand Prix",
+    "name": "Singapore",
     "circuit": "Marina Bay Circuit",
     "map": "circuit_assets/singapore.svg",
     "flag_path": "flag_assets/sg.svg",
@@ -254,7 +254,7 @@
     }
   },
   { "round": 19,
-    "name": "United States Grand Prix",
+    "name": "United States",
     "circuit": "Circuit of The Americas",
     "map": "circuit_assets/united_states.svg",
     "flag_path": "flag_assets/us.svg",
@@ -268,7 +268,7 @@
     }
   },
   { "round": 20,
-    "name": "Mexico City Grand Prix",
+    "name": "Mexico City",
     "circuit": "Autódromo Hermanos Rodríguez",
     "map": "circuit_assets/mexico.svg",
     "flag_path": "flag_assets/mx.svg",
@@ -282,7 +282,7 @@
     }
   },
   { "round": 21,
-    "name": "Brazilian Grand Prix",
+    "name": "Brazilian",
     "circuit": "Autódromo José Carlos Pace",
     "map": "circuit_assets/brazil.svg",
     "flag_path": "flag_assets/br.svg",
@@ -296,7 +296,7 @@
     }
   },
   { "round": 22,
-    "name": "Las Vegas Grand Prix",
+    "name": "Las Vegas",
     "circuit": "Las Vegas Strip Circuit",
     "map": "circuit_assets/las_vegas.svg",
     "flag_path": "flag_assets/us.svg",
@@ -310,7 +310,7 @@
     }
   },
   { "round": 23,
-    "name": "Qatar Grand Prix",
+    "name": "Qatar",
     "circuit": "Lusail International Circuit",
     "map": "circuit_assets/qatar.svg",
     "flag_path": "flag_assets/qa.svg",
@@ -324,7 +324,7 @@
     }
   },
   { "round": 24,
-    "name": "Abu Dhabi Grand Prix",
+    "name": "Abu Dhabi",
     "circuit": "Yas Marina Circuit",
     "map": "circuit_assets/abu_dhabi.svg",
     "flag_path": "flag_assets/ae.svg",
