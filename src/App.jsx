@@ -1,7 +1,9 @@
 import { use, useState } from "react";
 import "./App.css";
-import CurrentWeek from "./Components/CurrentWeek";
+import CurrentWeek from "./Components/CircuitInfo";
 import Schedule from "./Components/Schedule";
+import Calendar from "./Components/Calendar";
+import CircuitInfo from "./Components/CircuitInfo";
 function handleToggle() {
   const toggleButton = document.getElementById("toggle-btn");
   const sidebar = document.getElementById("sidebar");
@@ -108,16 +110,16 @@ function App() {
       </nav>
       <main id="content" className="">
         <div className="grid-container">
-          <div className="box" style={{gridArea: "currentWeek"}}><CurrentWeek /></div>
+          <div className="box" style={{gridArea: "circuitInfo"}}><CircuitInfo /></div>
           <div className="box" style={{gridArea: "schedule"}}><Schedule /></div>
           <div className="box" style={{gridArea: "wdc"}}></div>
           <div className="box" style={{gridArea: "wcc"}}></div>
           <div className="box" style={{gridArea: "lastSession"}}></div>
-          <div className="box" style={{gridArea: "calendar"}}></div>
+          <div className="box" style={{gridArea: "calendar"}}><Calendar /></div>
           <div className="box" style={{gridArea: "countdown"}}></div>
           <div className="box" style={{gridArea: "weather"}}></div>
           <div className="box" style={{gridArea: "podium"}}></div>
-          <div className="box" style={{gridArea: "circuitInfo"}}></div>
+          <div className="box" style={{gridArea: "test"}}></div>
         </div>
       </main>
     </div>

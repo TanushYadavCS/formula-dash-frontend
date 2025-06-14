@@ -9,6 +9,14 @@ export function formatLocalDate(timeString) {
   }).format(date);
   return day;
 }
+export function formatLocalDateNoDay(timeString) {
+  const date = new Date(timeString);
+  const day = Intl.DateTimeFormat(undefined, {
+    month: "short",
+    day: "numeric",
+  }).format(date);
+  return day;
+}
 export function formatLocalTime(timeString) {
   const date = new Date(timeString);
   const time = Intl.DateTimeFormat(undefined, {
@@ -66,4 +74,48 @@ export function useStandings(api) {
   }, [api]);
 
   return { standings, loading };
+}
+
+export function differenceInWeeks(weekend1, weekend2){
+  weekend1 = weekend1.slice(0,10);
+  weekend1 = Date.parse(weekend1);
+  weekend2 = weekend2.slice(0,10);
+  weekend2 = Date.parse(weekend2);
+  const weeksInBetween = Math.floor((weekend2-weekend1)/(1000*3600*24*7));
+  return weeksInBetween;
+}
+
+export function calendarGenerator(){
+  let dateArray = [];
+  let gapsArray = [];
+  let calendarArray = [];
+  let roundNo = 0;
+  while (roundNo < circuits.length) {
+    dateArray.push({
+      round: circuits[roundNo].round,
+      startDate: circuits[roundNo].sessions.practice_1.slice(0,10),
+      endDate: circuits[roundNo].sessions.race.slice(0,10),
+      name: circuits[roundNo].name,
+      weekendType: circuits[roundNo].weekend_type,
+    });
+    roundNo = roundNo + 1;
+  }
+  roundNo = 0;
+  while (roundNo < circuits.length-1){
+    gapsArray.push({gap:differenceInWeeks(dateArray[roundNo].endDate, dateArray[roundNo+1].endDate)-1})
+    roundNo = roundNo+1;
+  }
+  for (let i = 0; i < circuits.length; i++){
+    calendarArray.push(dateArray[i]);
+    if (i < gapsArray.length){
+        calendarArray.push(gapsArray[i]);
+    }
+  }
+  for (let i = 0; i < calendarArray.length; i++){
+    if (calendarArray[i].gap==0){
+      calendarArray.splice(i,1);
+    }
+  }
+  calendarArray = JSON.stringify(calendarArray);
+  console.log(calendarArray);
 }

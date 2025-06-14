@@ -12,6 +12,11 @@
       "practice_3": "2025-03-15T01:30:00Z",
       "qualifying": "2025-03-15T05:00:00Z",
       "race": "2025-03-16T04:00:00Z"
+    },
+    "track_info": {
+      "length": 5.287,
+      "laps": 58,
+      "corners": 14
     }
   },
   {
@@ -27,9 +32,15 @@
       "sprint": "2025-03-22T03:00:00Z",
       "qualifying": "2025-03-22T07:00:00Z",
       "race": "2025-03-23T07:00:00Z"
+    },
+    "track_info": {
+      "length": 5.451,
+      "laps": 56,
+      "corners": 16
     }
   },
-  { "round": 3,
+  {
+    "round": 3,
     "name": "Japanese",
     "circuit": "Suzuka Circuit",
     "map": "circuit_assets/japan.svg",
@@ -41,9 +52,15 @@
       "practice_3": "2025-04-05T02:30:00Z",
       "qualifying": "2025-04-05T06:00:00Z",
       "race": "2025-04-06T05:00:00Z"
+    },
+    "track_info": {
+      "length": 5.807,
+      "laps": 53,
+      "corners": 18
     }
   },
-  { "round": 4,
+  {
+    "round": 4,
     "name": "Bahrain",
     "circuit": "Bahrain International Circuit",
     "map": "circuit_assets/bahrain.svg",
@@ -55,9 +72,15 @@
       "practice_3": "2025-04-12T12:30:00Z",
       "qualifying": "2025-04-12T16:00:00Z",
       "race": "2025-04-13T15:00:00Z"
+    },
+    "track_info": {
+      "length": 5.412,
+      "laps": 57,
+      "corners": 15
     }
   },
-  { "round": 5,
+  {
+    "round": 5,
     "name": "Saudi Arabian",
     "circuit": "Jeddah Corniche Circuit",
     "map": "circuit_assets/saudi_arabia.svg",
@@ -69,9 +92,15 @@
       "practice_3": "2025-04-19T13:30:00Z",
       "qualifying": "2025-04-19T17:00:00Z",
       "race": "2025-04-20T17:00:00Z"
+    },
+    "track_info": {
+      "length": 6.174,
+      "laps": 50,
+      "corners": 27
     }
   },
-  { "round": 6,
+  {
+    "round": 6,
     "name": "Miami",
     "circuit": "Miami International Autodrome",
     "map": "circuit_assets/miami.svg",
@@ -83,9 +112,15 @@
       "sprint": "2025-05-03T16:00:00Z",
       "qualifying": "2025-05-03T20:00:00Z",
       "race": "2025-05-04T20:00:00Z"
+    },
+    "track_info": {
+      "length": 5.412,
+      "laps": 57,
+      "corners": 19
     }
   },
-  { "round": 7,
+  {
+    "round": 7,
     "name": "Emilia-Romagna",
     "circuit": "Autodromo Internazionale Enzo e Dino Ferrari",
     "map": "circuit_assets/imola.svg",
@@ -97,9 +132,15 @@
       "practice_3": "2025-05-17T10:30:00Z",
       "qualifying": "2025-05-17T14:00:00Z",
       "race": "2025-05-18T13:00:00Z"
+    },
+    "track_info": {
+      "length": 4.909,
+      "laps": 63,
+      "corners": 19
     }
   },
-  { "round": 8,
+  {
+    "round": 8,
     "name": "Monaco",
     "circuit": "Circuit de Monaco",
     "map": "circuit_assets/monaco.svg",
@@ -111,9 +152,15 @@
       "practice_3": "2025-05-24T10:30:00Z",
       "qualifying": "2025-05-24T14:00:00Z",
       "race": "2025-05-25T13:00:00Z"
+    },
+    "track_info": {
+      "length": 3.337,
+      "laps": 78,
+      "corners": 19
     }
   },
-  { "round": 9,
+  {
+    "round": 9,
     "name": "Spanish",
     "circuit": "Circuit de Barcelona-Catalunya",
     "map": "circuit_assets/spain.svg",
@@ -125,9 +172,15 @@
       "practice_3": "2025-05-31T10:30:00Z",
       "qualifying": "2025-05-31T14:00:00Z",
       "race": "2025-06-01T13:00:00Z"
+    },
+    "track_info": {
+      "length": 4.675,
+      "laps": 66,
+      "corners": 16
     }
   },
-  { "round": 10,
+  {
+    "round": 10,
     "name": "Canadian",
     "circuit": "Circuit Gilles-Villeneuve",
     "map": "circuit_assets/canada.svg",
@@ -139,9 +192,15 @@
       "practice_3": "2025-06-14T16:30:00Z",
       "qualifying": "2025-06-14T20:00:00Z",
       "race": "2025-06-15T18:00:00Z"
+    },
+    "track_info": {
+      "length": 4.361,
+      "laps": 70,
+      "corners": 14
     }
   },
-  { "round": 11,
+  {
+    "round": 11,
     "name": "Austrian",
     "circuit": "Red Bull Ring",
     "map": "circuit_assets/austria.svg",
@@ -153,9 +212,15 @@
       "practice_3": "2025-06-28T10:30:00Z",
       "qualifying": "2025-06-28T14:00:00Z",
       "race": "2025-06-29T13:00:00Z"
+    },
+    "track_info": {
+      "length": 4.318,
+      "laps": 71,
+      "corners": 10
     }
   },
-  { "round": 12,
+  {
+    "round": 12,
     "name": "British",
     "circuit": "Silverstone Circuit",
     "map": "circuit_assets/great_britain.svg",
@@ -167,9 +232,15 @@
       "practice_3": "2025-07-05T10:30:00Z",
       "qualifying": "2025-07-05T14:00:00Z",
       "race": "2025-07-06T14:00:00Z"
+    },
+    "track_info": {
+      "length": 5.891,
+      "laps": 52,
+      "corners": 18
     }
   },
-  { "round": 13,
+  {
+    "round": 13,
     "name": "Belgian",
     "circuit": "Circuit de Spa-Francorchamps",
     "map": "circuit_assets/belgium.svg",
@@ -181,9 +252,15 @@
       "sprint": "2025-07-26T10:00:00Z",
       "qualifying": "2025-07-26T14:00:00Z",
       "race": "2025-07-27T13:00:00Z"
+    },
+    "track_info": {
+      "length": 7.004,
+      "laps": 44,
+      "corners": 19
     }
   },
-  { "round": 14,
+  {
+    "round": 14,
     "name": "Hungarian",
     "circuit": "Hungaroring",
     "map": "circuit_assets/hungary.svg",
@@ -195,9 +272,15 @@
       "practice_3": "2025-08-02T10:30:00Z",
       "qualifying": "2025-08-02T14:00:00Z",
       "race": "2025-08-03T13:00:00Z"
+    },
+    "track_info": {
+      "length": 4.381,
+      "laps": 70,
+      "corners": 14
     }
   },
-  { "round": 15,
+  {
+    "round": 15,
     "name": "Dutch",
     "circuit": "Circuit Zandvoort",
     "map": "circuit_assets/netherlands.svg",
@@ -209,9 +292,15 @@
       "practice_3": "2025-08-30T09:30:00Z",
       "qualifying": "2025-08-30T13:00:00Z",
       "race": "2025-08-31T13:00:00Z"
+    },
+    "track_info": {
+      "length": 4.259,
+      "laps": 72,
+      "corners": 14
     }
   },
-  { "round": 16,
+  {
+    "round": 16,
     "name": "Italian",
     "circuit": "Autodromo Nazionale Monza",
     "map": "circuit_assets/italy.svg",
@@ -223,9 +312,15 @@
       "practice_3": "2025-09-06T14:00:00Z",
       "qualifying": "2025-09-06T14:00:00Z",
       "race": "2025-09-07T13:00:00Z"
+    },
+    "track_info": {
+      "length": 5.793,
+      "laps": 53,
+      "corners": 11
     }
   },
-  { "round": 17,
+  {
+    "round": 17,
     "name": "Azerbaijan",
     "circuit": "Baku City Circuit",
     "map": "circuit_assets/azerbaijan.svg",
@@ -237,9 +332,15 @@
       "practice_3": "2025-09-20T08:30:00Z",
       "qualifying": "2025-09-20T12:00:00Z",
       "race": "2025-09-21T11:00:00Z"
+    },
+    "track_info": {
+      "length": 6.003,
+      "laps": 51,
+      "corners": 20
     }
   },
-  { "round": 18,
+  {
+    "round": 18,
     "name": "Singapore",
     "circuit": "Marina Bay Circuit",
     "map": "circuit_assets/singapore.svg",
@@ -251,9 +352,15 @@
       "practice_3": "2025-10-04T09:30:00Z",
       "qualifying": "2025-10-04T13:00:00Z",
       "race": "2025-10-05T12:00:00Z"
+    },
+    "track_info": {
+      "length": 5.063,
+      "laps": 61,
+      "corners": 23
     }
   },
-  { "round": 19,
+  {
+    "round": 19,
     "name": "United States",
     "circuit": "Circuit of The Americas",
     "map": "circuit_assets/united_states.svg",
@@ -265,9 +372,15 @@
       "sprint": "2025-10-18T17:00:00Z",
       "qualifying": "2025-10-18T21:00:00Z",
       "race": "2025-10-19T19:00:00Z"
+    },
+    "track_info": {
+      "length": 5.513,
+      "laps": 56,
+      "corners": 20
     }
   },
-  { "round": 20,
+  {
+    "round": 20,
     "name": "Mexico City",
     "circuit": "Autódromo Hermanos Rodríguez",
     "map": "circuit_assets/mexico.svg",
@@ -279,9 +392,15 @@
       "practice_3": "2025-10-25T17:30:00Z",
       "qualifying": "2025-10-25T21:00:00Z",
       "race": "2025-10-26T20:00:00Z"
+    },
+    "track_info": {
+      "length": 4.304,
+      "laps": 71,
+      "corners": 17
     }
   },
-  { "round": 21,
+  {
+    "round": 21,
     "name": "Brazilian",
     "circuit": "Autódromo José Carlos Pace",
     "map": "circuit_assets/brazil.svg",
@@ -293,9 +412,15 @@
       "sprint": "2025-11-08T14:00:00Z",
       "qualifying": "2025-11-08T18:00:00Z",
       "race": "2025-11-09T17:00:00Z"
+    },
+    "track_info": {
+      "length": 4.309,
+      "laps": 71,
+      "corners": 15
     }
   },
-  { "round": 22,
+  {
+    "round": 22,
     "name": "Las Vegas",
     "circuit": "Las Vegas Strip Circuit",
     "map": "circuit_assets/las_vegas.svg",
@@ -307,9 +432,15 @@
       "practice_3": "2025-11-22T00:30:00Z",
       "qualifying": "2025-11-22T04:00:00Z",
       "race": "2025-11-23T04:00:00Z"
+    },
+    "track_info": {
+      "length": 6.12,
+      "laps": 50,
+      "corners": 17
     }
   },
-  { "round": 23,
+  {
+    "round": 23,
     "name": "Qatar",
     "circuit": "Lusail International Circuit",
     "map": "circuit_assets/qatar.svg",
@@ -321,9 +452,15 @@
       "sprint": "2025-11-29T14:00:00Z",
       "qualifying": "2025-11-29T16:00:00Z",
       "race": "2025-11-30T16:00:00Z"
+    },
+    "track_info": {
+      "length": 5.807,
+      "laps": 57,
+      "corners": 16
     }
   },
-  { "round": 24,
+  {
+    "round": 24,
     "name": "Abu Dhabi",
     "circuit": "Yas Marina Circuit",
     "map": "circuit_assets/abu_dhabi.svg",
@@ -335,6 +472,11 @@
       "practice_3": "2025-12-06T10:30:00Z",
       "qualifying": "2025-12-06T14:00:00Z",
       "race": "2025-12-07T13:00:00Z"
+    },
+    "track_info": {
+      "length": 5.281,
+      "laps": 58,
+      "corners": 16
     }
   }
 ]

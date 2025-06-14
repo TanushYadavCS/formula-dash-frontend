@@ -11,13 +11,13 @@ export default function Schedule(){
       setCurrentRace(race);
     }, []);
     const sessionNames = {
-      "practice_1": "FP1   ",
-      "practice_2": "FP2   ",
-      "practice_3": "FP3   ",
-      "qualifying": "Q      ",
+      "practice_1": "FP1",
+      "practice_2": "FP2",
+      "practice_3": "FP3",
+      "qualifying": "Q",
       "sprint": "Sprint",
-      "sprint_qualifying": "SQ    ",
-      "race": "Race  ",
+      "sprint_qualifying": "SQ",
+      "race": "Race",
     };
     if (!currentRace) return ("Error");
     return(
@@ -28,8 +28,7 @@ export default function Schedule(){
                  {Object.entries(currentRace.sessions).map(([sessionID, time]) => (
                     <tr className="sch_session">
                         <td className="sch_sessionName">{sessionNames[sessionID]}</td>
-                        <td className="sch_sessionDate">{formatLocalDate(time)}</td>
-                        <td className="sch_sessionTime"><span className="sch_timeText">{formatLocalTime(time)}</span></td>
+                        <td className="sch_sessionDate">{formatLocalDate(time)}<br /><span className="sch_sessionTime">{formatLocalTime(time)}</span></td>
                     </tr>
                  ))}
                  </tbody>
