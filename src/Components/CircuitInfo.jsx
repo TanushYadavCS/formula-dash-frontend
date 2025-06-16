@@ -14,26 +14,30 @@ export default function CircuitInfo() {
     (entry) => entry.round == currentRace.round
   );
   return (
-      <div className="ci_content">
-        <table className=".ci_table">
-          <tr>
-            <td className="ci_circuitDesc" colSpan={2}>Circuit</td></tr><tr>
-            <td className="ci_circuit" colSpan={2}>{currentRace.circuit}</td>
-          </tr>
-          <tr>
-            <td className="ci_lengthDesc" colSpan={2}>Length</td></tr><tr>
-            <td className="ci_length" colSpan={2}>{currentRace.track_info.length} km</td>
-          </tr>
-          <tr>
-            <td className="ci_lapsDesc" colSpan={2}>Laps</td></tr><tr>
-            <td className="ci_laps" colSpan={2}>{currentRace.track_info.laps}</td>
-          </tr>
-          <tr>
-            <td className="ci_cornersDesc" colSpan={2}>Corners</td></tr><tr>
-            <td className="ci_corners">{currentRace.track_info.corners}</td>
-          </tr>
-          
-        </table>
+    <div className="ci_content">
+      <div className="ci_header">
+        {currentRace.name} <span className="ci_headerText">GP</span>
       </div>
+      <div className="ci_tableDiv">
+        <table className="ci_table">
+          <tbody>
+            <tr>
+              <td colSpan={2} className="ci_circuitDesc">Circuit</td></tr><tr>
+              <td className="ci_circuit" colSpan={2}>{currentRace.circuit}</td>
+            </tr>
+            <tr>
+        
+              <td colSpan={2} className="ci_lengthDesc">Length</td></tr><tr>
+              <td colSpan={2} className="ci_length">{currentRace.track_info.length} km</td>
+            </tr>
+            <tr>
+        
+              <td colSpan={2} className="ci_lengthDesc">Laps</td></tr><tr>
+              <td colSpan={2} className="ci_length">{currentRace.track_info.laps}</td>
+            </tr>
+          </tbody>
+        </table>  
+      </div>
+    </div>
   );
 }

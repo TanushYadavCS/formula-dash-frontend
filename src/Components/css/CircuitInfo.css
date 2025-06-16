@@ -1,40 +1,70 @@
+.ci_content {
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+  position: relative;
+  z-index: 1;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
 
-.ci_content{
-    display: flex;
-    flex-direction: column;
-    color: var(--text);
-    position: relative;
-    z-index: 1;
-    justify-content: center;
-    align-items: center;     
-    height: 100%;
-}
-.ci_table{
+.ci_table {
   border-collapse: collapse;
+  width: 100%;
+  margin-block: 10%;
 }
-.ci_round, .ci_gp{
+.ci_round,
+.ci_gp {
   text-align: center;
   padding: 0;
 }
-.ci_gp{
+.ci_gp {
   font-size: smaller;
 }
-.ci_round{
+.ci_round {
   font-size: smaller;
 }
-.ci_gpText{
+.ci_gpText {
   color: var(--accent);
 }
 
-.ci_circuitDesc, .ci_lengthDesc, .ci_lapsDesc, .ci_cornersDesc{
+.ci_circuitDesc,
+.ci_lengthDesc,
+.ci_lapsDesc,
+.ci_cornersDesc {
+  width: 50%;
   vertical-align: top;
   color: var(--accent);
   font-size: smaller;
   text-align: center;
 }
 
-.ci_circuit, .ci_length, .ci_laps, .ci_corners{
+.ci_circuit,
+.ci_length,
+.ci_laps,
+.ci_corners {
+  width: 50%;
   vertical-align: top;
   font-size: smaller;
   text-align: center;
+}
+
+.ci_header {
+  padding-top: 10px;
+  text-align: center;
+  width: 100%;
+  margin-inline: auto;
+  top: 0;
+}
+.ci_headerText {
+  color: var(--accent);
+}
+.ci_tableDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }

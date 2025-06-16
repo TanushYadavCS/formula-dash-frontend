@@ -5,6 +5,7 @@ import Schedule from "./Components/Schedule";
 import Calendar from "./Components/Calendar";
 import CircuitInfo from "./Components/CircuitInfo";
 import Countdown from "./Components/Countdown";
+import Weather from "./Components/Weather";
 function handleToggle() {
   const toggleButton = document.getElementById("toggle-btn");
   const sidebar = document.getElementById("sidebar");
@@ -118,7 +119,7 @@ function App() {
           <div className="box" style={{gridArea: "lastSession"}}></div>
           <div className="box" style={{gridArea: "calendar"}}><Calendar /></div>
           <div className="box" style={{gridArea: "countdown"}}><Countdown /></div>
-          <div className="box" style={{gridArea: "weather"}}></div>
+          <div className="box" style={{gridArea: "weather"}}><Weather /></div>
           <div className="box" style={{gridArea: "podium"}}></div>
           <div className="box" style={{gridArea: "test"}}></div>
         </div>

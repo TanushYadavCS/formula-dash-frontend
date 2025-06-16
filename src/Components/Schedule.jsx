@@ -1,7 +1,7 @@
 import "./css/Schedule.css";
 import { useState, useEffect } from "react";
 import circuits from "../data/circuits.json";
-import { formatLocalDate, getSessionStatus } from "../utils";
+import { formatLocalDate} from "../utils";
 import { formatLocalTime } from "../utils";
 import { getRace } from "../utils";
 export default function Schedule(){

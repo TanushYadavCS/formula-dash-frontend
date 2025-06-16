@@ -8,13 +8,14 @@ export default function Calendar() {
   const currentRace = getRace(circuits);
   const calRef = useRef(null);
   useEffect(()=>{
-    calRef.current.scrollIntoView({behavior: "smooth", block: "center"})
+    calRef.current.scrollIntoView({ block: "center"})
   })
   return (
     <div className="cal_content">
       <div className="cal_header">
         Race <span className="cal_accentText">Calendar</span>
       </div>
+     
       <div className="cal_body">
         <table className="cal_table">
           <tbody>

@@ -46,7 +46,7 @@ button {
   align-self: start;
   transition: 300ms ease-in-out;
   overflow: hidden;
-  text-wrap: nowrap;
+  text-wrap: calendarwrap;
 }
 
 #sidebar button:hover {
@@ -55,7 +55,7 @@ button {
 }
 
 #sidebar > ul {
-  list-style: none;
+  list-style: calendarne;
   transition: all 300ms ease-in-out;
 }
 
@@ -102,7 +102,7 @@ button {
   background-color: var(--prim);
   border-radius: 0.5em;
   padding: 0.85em;
-  text-decoration: none;
+  text-decoration: calendarne;
   display: flex;
   align-items: center;
   gap: 1em;
@@ -155,8 +155,8 @@ main.close {
   grid-template-columns: 275px 275px 275px 275px 275px;
   grid-template-rows: 275px 275px 275px 275px;
   grid-template-areas:
-    "circuitInfo schedule lastSession calendar weather"
-    "countdown schedule lastSession calendar podium"
+    "circuitInfo calendar lastSession schedule weather"
+    "countdown calendar lastSession schedule podium"
     "wdc wdc wcc wcc test"
     "wdc wdc wcc wcc test";
   justify-content: center;
@@ -177,8 +177,8 @@ main.close {
     grid-template-columns: 225px 225px 225px 225px 225px;
     grid-template-rows: 225px 225px 225px 225px;
     grid-template-areas:
-      "circuitInfo schedule lastSession calendar weather"
-      "countdown schedule lastSession calendar podium"
+      "circuitInfo calendar lastSession schedule weather"
+      "countdown calendar lastSession schedule podium"
       "wdc wdc wcc wcc test"
       "wdc wdc wcc wcc test";
     justify-content: center;
@@ -194,8 +194,8 @@ main.close {
     grid-template-columns: 200px 200px 200px 200px 200px;
     grid-template-rows: 200px 200px 200px 200px;
     grid-template-areas:
-      "circuitInfo schedule lastSession calendar weather"
-      "countdown schedule lastSession calendar podium"
+      "circuitInfo calendar lastSession schedule weather"
+      "countdown calendar lastSession schedule podium"
       "wdc wdc wcc wcc test"
       "wdc wdc wcc wcc test";
     justify-content: center;
@@ -211,8 +211,8 @@ main.close {
     grid-template-columns: 200px 200px 200px 200px;
     grid-template-rows: 200px 200px 200px 200px 200px;
     grid-template-areas:
-      "circuitInfo schedule lastSession calendar"
-      "countdown schedule lastSession calendar"
+      "circuitInfo calendar lastSession schedule"
+      "countdown calendar lastSession schedule"
       "weather podium test test"
       "wdc wdc wcc wcc "
       "wdc wdc wcc wcc ";
@@ -229,10 +229,10 @@ main.close {
     grid-template-columns: 225px 225px 225px;
     grid-template-rows: 225px 225px 225px 225px 225px;
     grid-template-areas:
-      "circuitInfo schedule lastSession"
-      "countdown schedule lastSession"
-      "weather podium calendar"
-      "wdc wcc calendar"
+      "circuitInfo calendar lastSession"
+      "countdown calendar lastSession"
+      "weather podium schedule"
+      "wdc wcc schedule"
       "wdc wcc test";
     justify-content: center;
     gap: 15px;
@@ -262,11 +262,11 @@ main.close {
       width: 60px;
 
       span {
-        display: none;
+        display: calendarne;
       }
     }
     ul li.logo {
-      display: none;
+      display: calendarne;
     }
   }
 
@@ -277,7 +277,7 @@ main.close {
     width: 100vw;
   }
   .container {
-    border: none;
+    border: calendarne;
     padding: 0;
   }
   .grid-container {
@@ -287,10 +287,10 @@ main.close {
     grid-template-columns: 250px 250px 250px;
     grid-template-rows: 250px 250px 250px 250px 250px;
     grid-template-areas:
-      "circuitInfo schedule lastSession"
-      "countdown schedule lastSession"
-      "weather podium calendar"
-      "wdc wcc calendar"
+      "circuitInfo calendar lastSession"
+      "countdown calendar lastSession"
+      "weather podium schedule"
+      "wdc wcc schedule"
       "wdc wcc test";
     justify-content: center;
     gap: 15px;
@@ -321,11 +321,11 @@ main.close {
       width: 60px;
 
       span {
-        display: none;
+        display: calendarne;
       }
     }
     ul li.logo {
-      display: none;
+      display: calendarne;
     }
   }
 
@@ -336,7 +336,7 @@ main.close {
     width: 100vw;
   }
   .container {
-    border: none;
+    border: calendarne;
     padding: 0;
   }
   .grid-container {
@@ -346,10 +346,10 @@ main.close {
     grid-template-columns: 200px 200px 200px;
     grid-template-rows: 200px 200px 200px 200px 200px;
     grid-template-areas:
-      "circuitInfo schedule lastSession"
-      "countdown schedule lastSession"
-      "weather podium calendar"
-      "wdc wcc calendar"
+      "circuitInfo calendar lastSession"
+      "countdown calendar lastSession"
+      "weather podium schedule"
+      "wdc wcc schedule"
       "wdc wcc test";
     justify-content: center;
     gap: 15px;
@@ -380,11 +380,11 @@ main.close {
       width: 60px;
 
       span {
-        display: none;
+        display: calendarne;
       }
     }
     ul li.logo {
-      display: none;
+      display: calendarne;
     }
   }
 
@@ -395,7 +395,7 @@ main.close {
     width: 100vw;
   }
   .container {
-    border: none;
+    border: calendarne;
     padding: 0;
   }
   .grid-container {
@@ -405,10 +405,10 @@ main.close {
     grid-template-columns: 250px 250px;
     grid-template-rows: 250px 250px 250px 250px 250px 250px 250px 250px;
     grid-template-areas:
-      "circuitInfo schedule"
-      "countdown schedule "
-      "calendar weather"
-      "calendar lastSession"
+      "circuitInfo calendar"
+      "countdown calendar "
+      "schedule weather"
+      "schedule lastSession"
       "podium lastSession"
       "test test"
       "wdc wcc "
@@ -442,11 +442,11 @@ main.close {
       width: 60px;
 
       span {
-        display: none;
+        display: calendarne;
       }
     }
     ul li.logo {
-      display: none;
+      display: calendarne;
     }
   }
 
@@ -457,7 +457,7 @@ main.close {
     width: 100vw;
   }
   .container {
-    border: none;
+    border: calendarne;
     padding: 0;
   }
   .grid-container {
@@ -467,10 +467,10 @@ main.close {
     grid-template-columns: 200px 200px;
     grid-template-rows: 200px 200px 200px 200px 200px 200px 200px 200px;
     grid-template-areas:
-    "circuitInfo schedule"
-    "countdown schedule "
-    "calendar weather"
-    "calendar lastSession"
+    "circuitInfo calendar"
+    "countdown calendar "
+    "schedule weather"
+    "schedule lastSession"
     "podium lastSession"
     "test test"
     "wdc wcc "
@@ -504,11 +504,11 @@ main.close {
       width: 60px;
 
       span {
-        display: none;
+        display: calendarne;
       }
     }
     ul li.logo {
-      display: none;
+      display: calendarne;
     }
   }
 
@@ -519,7 +519,7 @@ main.close {
     width: 100vw;
   }
   .container {
-    border: none;
+    border: calendarne;
     padding: 0;
   }
   .grid-container {
@@ -529,10 +529,10 @@ main.close {
     grid-template-columns: 170px 170px;
     grid-template-rows: 170px 170px 170px 170px 170px 170px 170px 170px;
     grid-template-areas:
-    "circuitInfo schedule"
-    "countdown schedule "
-    "calendar weather"
-    "calendar lastSession"
+    "circuitInfo calendar"
+    "countdown calendar "
+    "schedule weather"
+    "schedule lastSession"
     "podium lastSession"
     "test test"
     "wdc wcc "
@@ -566,11 +566,11 @@ main.close {
       width: 60px;
 
       span {
-        display: none;
+        display: calendarne;
       }
     }
     ul li.logo {
-      display: none;
+      display: calendarne;
     }
   }
 
@@ -581,7 +581,7 @@ main.close {
     width: 100vw;
   }
   .container {
-    border: none;
+    border: calendarne;
     padding: 0;
   }
   .grid-container {
@@ -591,10 +591,10 @@ main.close {
     grid-template-columns: 140px 140px;
     grid-template-rows: 140px 140px 140px 140px 140px 140px 140px 140px;
     grid-template-areas:
-    "circuitInfo schedule"
-    "countdown schedule "
-    "calendar weather"
-    "calendar lastSession"
+    "circuitInfo calendar"
+    "countdown calendar "
+    "schedule weather"
+    "schedule lastSession"
     "podium lastSession"
     "test test"
     "wdc wcc "
