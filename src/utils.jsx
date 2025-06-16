@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 export function formatLocalDate(timeString) {
   const date = new Date(timeString);
   const day = Intl.DateTimeFormat(undefined, {

@@ -12,8 +12,8 @@
 }
 
 .cal_dateRange{
-    padding: 10px;
-    text-align: start;
+    padding-top: 10px;
+    text-align: center;
     text-wrap: balance;
 }
 .cal_header{
@@ -39,9 +39,9 @@
 
 
 .cal_raceName{
-    text-align: end;
+    text-align: center;
     color: var(--accent);
-    padding: 10px;
+    padding-bottom: 10px;
 }
 
 .cal_gapText{

@@ -30,8 +30,9 @@
 }
 .sch_sessionName{
     text-align: center;
-    font-weight: bold;
+    font-weight: normal;
     padding: 10px;
+    vertical-align: middle;
 }
 
 .sch_sessionTime{
@@ -40,11 +41,12 @@
 }
 
 .sch_timeText{
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .sch_sessionDate{
     color: var(--text);
     text-align: center;
     padding: 10px;
+    vertical-align: middle;
 }

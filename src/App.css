@@ -155,10 +155,10 @@ main.close {
   grid-template-columns: 275px 275px 275px 275px 275px;
   grid-template-rows: 275px 275px 275px 275px;
   grid-template-areas:
-    "circuitInfo schedule lastSession calendar podium"
-    "weather schedule lastSession calendar test"
+    "circuitInfo schedule lastSession calendar weather"
+    "countdown schedule lastSession calendar podium"
     "wdc wdc wcc wcc test"
-    "wdc wdc wcc wcc countdown";
+    "wdc wdc wcc wcc test";
   justify-content: center;
   gap: 15px;
   font-size: 18px;
@@ -177,10 +177,10 @@ main.close {
     grid-template-columns: 225px 225px 225px 225px 225px;
     grid-template-rows: 225px 225px 225px 225px;
     grid-template-areas:
-      "circuitInfo schedule lastSession calendar podium"
-      "weather schedule lastSession calendar test"
+      "circuitInfo schedule lastSession calendar weather"
+      "countdown schedule lastSession calendar podium"
       "wdc wdc wcc wcc test"
-      "wdc wdc wcc wcc countdown";
+      "wdc wdc wcc wcc test";
     justify-content: center;
     gap: 15px;
   }
@@ -194,10 +194,10 @@ main.close {
     grid-template-columns: 200px 200px 200px 200px 200px;
     grid-template-rows: 200px 200px 200px 200px;
     grid-template-areas:
-      "circuitInfo schedule lastSession calendar podium"
-      "weather schedule lastSession calendar test"
+      "circuitInfo schedule lastSession calendar weather"
+      "countdown schedule lastSession calendar podium"
       "wdc wdc wcc wcc test"
-      "wdc wdc wcc wcc countdown";
+      "wdc wdc wcc wcc test";
     justify-content: center;
     gap: 15px;
     font-size: 16px;
@@ -212,8 +212,8 @@ main.close {
     grid-template-rows: 200px 200px 200px 200px 200px;
     grid-template-areas:
       "circuitInfo schedule lastSession calendar"
-      "weather schedule lastSession calendar"
-      "podium countdown test test"
+      "countdown schedule lastSession calendar"
+      "weather podium test test"
       "wdc wdc wcc wcc "
       "wdc wdc wcc wcc ";
     justify-content: center;
@@ -230,10 +230,10 @@ main.close {
     grid-template-rows: 225px 225px 225px 225px 225px;
     grid-template-areas:
       "circuitInfo schedule lastSession"
-      "weather schedule lastSession"
-      "podium test calendar"
+      "countdown schedule lastSession"
+      "weather podium calendar"
       "wdc wcc calendar"
-      "wdc wcc countdown";
+      "wdc wcc test";
     justify-content: center;
     gap: 15px;
   }
@@ -288,10 +288,10 @@ main.close {
     grid-template-rows: 250px 250px 250px 250px 250px;
     grid-template-areas:
       "circuitInfo schedule lastSession"
-      "weather schedule lastSession"
-      "podium test calendar"
+      "countdown schedule lastSession"
+      "weather podium calendar"
       "wdc wcc calendar"
-      "wdc wcc countdown";
+      "wdc wcc test";
     justify-content: center;
     gap: 15px;
     font-size: 18px;
@@ -347,10 +347,10 @@ main.close {
     grid-template-rows: 200px 200px 200px 200px 200px;
     grid-template-areas:
       "circuitInfo schedule lastSession"
-      "weather schedule lastSession"
-      "podium test calendar"
+      "countdown schedule lastSession"
+      "weather podium calendar"
       "wdc wcc calendar"
-      "wdc wcc countdown";
+      "wdc wcc test";
     justify-content: center;
     gap: 15px;
     font-size: 15px;
@@ -406,10 +406,10 @@ main.close {
     grid-template-rows: 250px 250px 250px 250px 250px 250px 250px 250px;
     grid-template-areas:
       "circuitInfo schedule"
-      "weather schedule "
-      "calendar podium"
+      "countdown schedule "
+      "calendar weather"
       "calendar lastSession"
-      "countdown lastSession"
+      "podium lastSession"
       "test test"
       "wdc wcc "
       "wdc wcc ";
@@ -467,14 +467,14 @@ main.close {
     grid-template-columns: 200px 200px;
     grid-template-rows: 200px 200px 200px 200px 200px 200px 200px 200px;
     grid-template-areas:
-      "circuitInfo schedule"
-      "weather schedule "
-      "calendar podium"
-      "calendar lastSession"
-      "countdown lastSession"
-      "test test"
-      "wdc wcc "
-      "wdc wcc ";
+    "circuitInfo schedule"
+    "countdown schedule "
+    "calendar weather"
+    "calendar lastSession"
+    "podium lastSession"
+    "test test"
+    "wdc wcc "
+    "wdc wcc ";
     justify-content: center;
     gap: 15px;
     font-size: 16px;
@@ -529,14 +529,14 @@ main.close {
     grid-template-columns: 170px 170px;
     grid-template-rows: 170px 170px 170px 170px 170px 170px 170px 170px;
     grid-template-areas:
-      "circuitInfo schedule"
-      "weather schedule "
-      "calendar podium"
-      "calendar lastSession"
-      "countdown lastSession"
-      "test test"
-      "wdc wcc "
-      "wdc wcc ";
+    "circuitInfo schedule"
+    "countdown schedule "
+    "calendar weather"
+    "calendar lastSession"
+    "podium lastSession"
+    "test test"
+    "wdc wcc "
+    "wdc wcc ";
     justify-content: center;
     gap: 15px;
     font-size: 14px;
@@ -591,14 +591,14 @@ main.close {
     grid-template-columns: 140px 140px;
     grid-template-rows: 140px 140px 140px 140px 140px 140px 140px 140px;
     grid-template-areas:
-      "circuitInfo schedule"
-      "weather schedule "
-      "calendar podium"
-      "calendar lastSession"
-      "countdown lastSession"
-      "test test"
-      "wdc wcc "
-      "wdc wcc ";
+    "circuitInfo schedule"
+    "countdown schedule "
+    "calendar weather"
+    "calendar lastSession"
+    "podium lastSession"
+    "test test"
+    "wdc wcc "
+    "wdc wcc ";
     justify-content: center;
     gap: 15px;
     font-size: 11px;
