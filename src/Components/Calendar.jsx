@@ -7,22 +7,25 @@ import { getRace } from "../utils";
 export default function Calendar() {
   const currentRace = getRace(circuits);
   const calRef = useRef(null);
-  useEffect(()=>{
-    calRef.current.scrollIntoView({ block: "center"})
-  })
+  useEffect(() => {
+    calRef.current.scrollIntoView({ block: "start" });
+  }, []);
   return (
     <div className="cal_content">
       <div className="cal_header">
-        Race <span className="cal_accentText">Calendar</span>
+        <div className="cal_heading">
+          Race <span className="cal_accentText">Calendar</span>{" "}
+        </div>
       </div>
-     
+
       <div className="cal_body">
         <table className="cal_table">
           <tbody>
             {calendar.map((element) =>
               element.name ? (
                 <>
-                  <tr ref={currentRace.round == element.round ? calRef : null}
+                  <tr
+                    ref={currentRace.round == element.round ? calRef : null}
                     id={`${
                       currentRace.round == element.round
                         ? "cal_currentRaceElement"

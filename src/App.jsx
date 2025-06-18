@@ -1,11 +1,22 @@
 import { use, useState } from "react";
 import "./App.css";
-import CurrentWeek from "./Components/CircuitInfo";
+import { useEffect, useRef } from "react";
 import Schedule from "./Components/Schedule";
 import Calendar from "./Components/Calendar";
 import CircuitInfo from "./Components/CircuitInfo";
 import Countdown from "./Components/Countdown";
 import Weather from "./Components/Weather";
+import Podium from "./Components/Podium";
+function changeTheme(team) {
+  document.documentElement.style.setProperty(
+    "--accent",
+    `var(--${team}-accent)`
+  );
+  document.documentElement.style.setProperty(
+    "--secondary-accent",
+    `var(--${team}-sec)`
+  );
+}
 function handleToggle() {
   const toggleButton = document.getElementById("toggle-btn");
   const sidebar = document.getElementById("sidebar");
@@ -14,7 +25,18 @@ function handleToggle() {
   sidebar.classList.toggle("close");
   content.classList.toggle("close");
 }
+
+function handleDropdown() {
+  const dropdownSubmenu = document.getElementsByClassName("submenu")[0];
+  const dropdownButton = document.getElementsByClassName("dropButton")[0];
+  dropdownSubmenu.classList.toggle("show");
+  dropdownButton.classList.toggle("show");
+}
 function App() {
+  const appRef = useRef(null);
+  useEffect(() => {
+    appRef.current.scrollIntoView({ block: "start" });
+  });
   return (
     <div className="body">
       <nav id="sidebar" className="">
@@ -23,7 +45,7 @@ function App() {
             <span className="logo-text">
               Formula<span className="secondary">Dash</span>
             </span>
-            <button onClick={handleToggle} id="toggle-btn">
+            <button onClick={handleToggle} id="toggle-btn" className="navigate">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"
@@ -36,7 +58,7 @@ function App() {
             </button>
           </li>
           <li className="active navbutton">
-            <button>
+            <button className="navigate">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"
@@ -50,7 +72,7 @@ function App() {
             </button>
           </li>
           <li className="navbutton">
-            <button>
+            <button className="navigate">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"
@@ -65,7 +87,7 @@ function App() {
           </li>
           <li className="navbutton">
             {" "}
-            <button>
+            <button className="navigate">
               {" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +103,7 @@ function App() {
           </li>
           <li className="navbutton">
             {" "}
-            <button>
+            <button className="navigate">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"
@@ -95,7 +117,7 @@ function App() {
             </button>
           </li>
           <li className="navbutton">
-            <button>
+            <button className="navigate">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"
@@ -106,22 +128,224 @@ function App() {
                 <path d="M80-120v-80h800v80H80Zm40-120v-280h120v280H120Zm200 0v-480h120v480H320Zm200 0v-360h120v360H520Zm200 0v-600h120v600H720Z" />
               </svg>
               <span>Plots</span>
+            </button >
+          </li>
+          <li className="navbutton">
+            <button onClick={handleDropdown} className="dropButton navigate">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#ffffff"
+              >
+                <path d="M360-720h80v-80h-80v80Zm160 0v-80h80v80h-80ZM360-400v-80h80v80h-80Zm320-160v-80h80v80h-80Zm0 160v-80h80v80h-80Zm-160 0v-80h80v80h-80Zm160-320v-80h80v80h-80Zm-240 80v-80h80v80h-80ZM200-160v-640h80v80h80v80h-80v80h80v80h-80v320h-80Zm400-320v-80h80v80h-80Zm-160 0v-80h80v80h-80Zm-80-80v-80h80v80h-80Zm160 0v-80h80v80h-80Zm80-80v-80h80v80h-80Z" />
+              </svg>
+              <span>Theme</span>
+              <svg
+                className="dropdownsvg"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#ffffff"
+              >
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
             </button>
+
+            <ul className="submenu">
+              <div className="submenu-div">
+                <li className="submenu-item">
+                  <button  className="submenu_button" onClick={() => changeTheme("ferrari")}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="var(--ferrari-accent)"
+                    >
+                      <path d="M160-440v-80h640v80H160Z" />
+                    </svg>
+                    <span>Ferrari</span>
+                  </button>
+                </li>
+                <li className="submenu-item">
+                  <button  className="submenu_button" onClick={() => changeTheme("mercedes")}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="var(--mercedes-accent)"
+                    >
+                      <path d="M160-440v-80h640v80H160Z" />
+                    </svg>
+                    <span>Mercedes</span>
+                  </button>
+                </li>
+                <li className="submenu-item">
+                  <button  className="submenu_button" onClick={() => changeTheme("mclaren")}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="var(--mclaren-accent)"
+                    >
+                      <path d="M160-440v-80h640v80H160Z" />
+                    </svg>
+                    <span>McLaren</span>
+                  </button>
+                </li>
+                <li className="submenu-item">
+                  <button
+                    className="submenu_button"
+                    onClick={() => changeTheme("red_bull")}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="var(--red_bull-accent)"
+                    >
+                      <path d="M160-440v-80h640v80H160Z" />
+                    </svg>
+                    <span>Red Bull</span>
+                  </button>
+                </li>
+                <li className="submenu-item">
+                  <button
+                    className="submenu_button"
+                    onClick={() => changeTheme("aston_martin")}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="var(--aston_martin-accent)"
+                    >
+                      <path d="M160-440v-80h640v80H160Z" />
+                    </svg>
+                    <span>Aston Martin</span>
+                  </button>
+                </li>
+                <li className="submenu-item">
+                  <button
+                    className="submenu_button"
+                    onClick={() => changeTheme("williams")}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="var(--williams-accent)"
+                    >
+                      <path d="M160-440v-80h640v80H160Z" />
+                    </svg>
+                    <span>Williams</span>
+                  </button>
+                </li>
+                <li className="submenu-item">
+                  <button
+                    className="submenu_button"
+                    onClick={() => changeTheme("rb")}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="var(--rb-accent)"
+                    >
+                      <path d="M160-440v-80h640v80H160Z" />
+                    </svg>
+                    <span>Racing Bulls</span>
+                  </button>
+                </li>
+                <li className="submenu-item">
+                  <button
+                    className="submenu_button"
+                    onClick={() => changeTheme("haas")}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="var(--haas-accent)"
+                    >
+                      <path d="M160-440v-80h640v80H160Z" />
+                    </svg>
+                    <span>Haas</span>
+                  </button>
+                </li>
+                <li className="submenu-item">
+                  <button
+                    className="submenu_button"
+                    onClick={() => changeTheme("sauber")}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="var(--sauber-accent)"
+                    >
+                      <path d="M160-440v-80h640v80H160Z" />
+                    </svg>
+                    <span>Sauber</span>
+                  </button>
+                </li>
+                <li className="submenu-item">
+                  <button
+                    className="submenu_button"
+                    onClick={() => changeTheme("alpine")}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="var(--alpine-accent)"
+                    >
+                      <path d="M160-440v-80h640v80H160Z" />
+                    </svg>
+                    <span>Alpine</span>
+                  </button>
+                </li>
+              </div>
+            </ul>
           </li>
         </ul>
       </nav>
-      <main id="content" className="">
+      <main id="content" className="" ref={appRef}>
         <div className="grid-container">
-          <div className="box" style={{gridArea: "circuitInfo"}}><CircuitInfo /></div>
-          <div className="box" style={{gridArea: "schedule"}}><Schedule /></div>
-          <div className="box" style={{gridArea: "wdc"}}></div>
-          <div className="box" style={{gridArea: "wcc"}}></div>
-          <div className="box" style={{gridArea: "lastSession"}}></div>
-          <div className="box" style={{gridArea: "calendar"}}><Calendar /></div>
-          <div className="box" style={{gridArea: "countdown"}}><Countdown /></div>
-          <div className="box" style={{gridArea: "weather"}}><Weather /></div>
-          <div className="box" style={{gridArea: "podium"}}></div>
-          <div className="box" style={{gridArea: "test"}}></div>
+          <div className="box" style={{ gridArea: "circuitInfo" }}>
+            <CircuitInfo />
+          </div>
+          <div className="box" style={{ gridArea: "schedule" }}>
+            <Schedule />
+          </div>
+          <div className="box" style={{ gridArea: "wdc" }}></div>
+          <div className="box" style={{ gridArea: "wcc" }}></div>
+          <div className="box" style={{ gridArea: "lastSession" }}></div>
+          <div className="box" style={{ gridArea: "calendar" }}>
+            <Calendar />
+          </div>
+          <div className="box" style={{ gridArea: "countdown" }}>
+            <Countdown />
+          </div>
+          <div className="box" style={{ gridArea: "weather" }}>
+            <Weather />
+          </div>
+          <div className="box" style={{ gridArea: "podium" }}>
+            <Podium />
+          </div>
+          <div className="box" style={{ gridArea: "test" }}></div>
         </div>
       </main>
     </div>

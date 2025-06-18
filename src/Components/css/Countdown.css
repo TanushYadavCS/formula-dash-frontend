@@ -19,7 +19,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 40%;
+    opacity: 50%;
 }
 
 .co_header{
@@ -29,7 +29,6 @@
     width: 100%;
     margin-inline: auto;
     top: 0;
-    font-size: smaller;
 }
 
 .co_headerText{
@@ -45,4 +44,6 @@
     transform: translate(-50%, -50%);
 }.co_countdownComp{
     font-weight: bold;
+    color: var(--accent);
+    background-color: rgba(0,0,0,0.6);
 }

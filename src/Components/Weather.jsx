@@ -34,7 +34,7 @@ export default function Weather() {
         {data.hourly ? (
           <div className="we_weather">
             <div className="we_weatherComponent">
-              <span className="we_desc">Temp.</span>
+              <span className="we_desc">Temp. (°C)</span>
               <span className="we_weatherData">
                 {Math.min(
                   data.hourly.temperature_2m[
@@ -50,7 +50,7 @@ export default function Weather() {
                     new Date(currentRace.sessions.race).getUTCHours() + 2
                   ]
                 )}{" "}
-                {data.hourly_units.temperature_2m} -{" "}
+                 -{" "}
                 {Math.max(
                   data.hourly.temperature_2m[
                     new Date(currentRace.sessions.race).getUTCHours() - 1
@@ -64,8 +64,7 @@ export default function Weather() {
                   data.hourly.temperature_2m[
                     new Date(currentRace.sessions.race).getUTCHours() + 2
                   ]
-                )}{" "}
-                {data.hourly_units.temperature_2m}
+                )}
               </span>
             </div>
             <div className="we_weatherComponent">
@@ -85,7 +84,6 @@ export default function Weather() {
                     new Date(currentRace.sessions.race).getUTCHours() + 2
                   ]
                 )}
-                {data.hourly_units.precipitation_probability}
               </span>
             </div>
             <div className="we_weatherComponent">
@@ -105,7 +103,6 @@ export default function Weather() {
                     new Date(currentRace.sessions.race).getUTCHours() + 2
                   ]
                 )}{" "}
-                {data.hourly_units.precipitation}
               </span>
             </div>
             <div className="we_weatherComponent">
@@ -124,12 +121,11 @@ export default function Weather() {
                   data.hourly.wind_speed_10m[
                     new Date(currentRace.sessions.race).getUTCHours() + 2
                   ]
-                )}{" "}
-                {data.hourly_units.wind_speed_10m}
+                )}
               </span>
             </div>
             <div className="we_weatherComponent">
-            <span className="we_desc">Cloud cover</span>
+            <span className="we_desc">Cloud cover (%)</span>
               <span className="we_weatherData">
                 {Math.max(
                   data.hourly.cloud_cover[
@@ -145,7 +141,6 @@ export default function Weather() {
                     new Date(currentRace.sessions.race).getUTCHours() + 2
                   ]
                 )}
-                {data.hourly_units.cloud_cover}
               </span>
             </div>
           </div>
