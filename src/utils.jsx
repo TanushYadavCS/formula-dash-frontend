@@ -37,6 +37,18 @@ export function getRace(circuits, raceDuration = 3) {
     }) || circuits[circuits.length - 1]
   );
 }
+export function getPreviousRace(circuits, raceDuration = 3) {
+  const currentTime = new Date();
+  const pastRaces = circuits.filter((circuit) => {
+    const raceStart = new Date(circuit.sessions.race);
+    const raceEnd = new Date(
+      raceStart.getTime() + raceDuration * 60 * 60 * 1000
+    );
+    return raceEnd < currentTime;
+  });
+  return pastRaces[pastRaces.length - 1] || circuits[0];
+}
+
 export function getTimeDifference(targetTime) {
   const now = new Date();
   const diff = Math.max(0, targetTime.getTime() - now.getTime());
@@ -75,16 +87,18 @@ export function useStandings(api) {
   return { standings, loading };
 }
 
-export function differenceInWeeks(weekend1, weekend2){
-  weekend1 = weekend1.slice(0,10);
+export function differenceInWeeks(weekend1, weekend2) {
+  weekend1 = weekend1.slice(0, 10);
   weekend1 = Date.parse(weekend1);
-  weekend2 = weekend2.slice(0,10);
+  weekend2 = weekend2.slice(0, 10);
   weekend2 = Date.parse(weekend2);
-  const weeksInBetween = Math.floor((weekend2-weekend1)/(1000*3600*24*7));
+  const weeksInBetween = Math.floor(
+    (weekend2 - weekend1) / (1000 * 3600 * 24 * 7)
+  );
   return weeksInBetween;
 }
 
-export function calendarGenerator(){
+export function calendarGenerator() {
   let dateArray = [];
   let gapsArray = [];
   let calendarArray = [];
@@ -92,27 +106,33 @@ export function calendarGenerator(){
   while (roundNo < circuits.length) {
     dateArray.push({
       round: circuits[roundNo].round,
-      startDate: circuits[roundNo].sessions.practice_1.slice(0,10),
-      endDate: circuits[roundNo].sessions.race.slice(0,10),
+      startDate: circuits[roundNo].sessions.practice_1.slice(0, 10),
+      endDate: circuits[roundNo].sessions.race.slice(0, 10),
       name: circuits[roundNo].name,
       weekendType: circuits[roundNo].weekend_type,
     });
     roundNo = roundNo + 1;
   }
   roundNo = 0;
-  while (roundNo < circuits.length-1){
-    gapsArray.push({gap:differenceInWeeks(dateArray[roundNo].endDate, dateArray[roundNo+1].endDate)-1})
-    roundNo = roundNo+1;
+  while (roundNo < circuits.length - 1) {
+    gapsArray.push({
+      gap:
+        differenceInWeeks(
+          dateArray[roundNo].endDate,
+          dateArray[roundNo + 1].endDate
+        ) - 1,
+    });
+    roundNo = roundNo + 1;
   }
-  for (let i = 0; i < circuits.length; i++){
+  for (let i = 0; i < circuits.length; i++) {
     calendarArray.push(dateArray[i]);
-    if (i < gapsArray.length){
-        calendarArray.push(gapsArray[i]);
+    if (i < gapsArray.length) {
+      calendarArray.push(gapsArray[i]);
     }
   }
-  for (let i = 0; i < calendarArray.length; i++){
-    if (calendarArray[i].gap==0){
-      calendarArray.splice(i,1);
+  for (let i = 0; i < calendarArray.length; i++) {
+    if (calendarArray[i].gap == 0) {
+      calendarArray.splice(i, 1);
     }
   }
   calendarArray = JSON.stringify(calendarArray);

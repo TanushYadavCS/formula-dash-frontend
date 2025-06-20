@@ -19,7 +19,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 50%;
+    opacity: 90%;
 }
 
 .co_header{
@@ -45,5 +45,5 @@
 }.co_countdownComp{
     font-weight: bold;
     color: var(--accent);
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.8);
 }

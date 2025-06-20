@@ -5,8 +5,9 @@ import Schedule from "./Components/Schedule";
 import Calendar from "./Components/Calendar";
 import CircuitInfo from "./Components/CircuitInfo";
 import Countdown from "./Components/Countdown";
-import Weather from "./Components/Weather";
-import Podium from "./Components/Podium";
+import LastSession from "./Components/LastSession";
+import WDC from "./Components/WDC";
+import WCC from "./Components/WCC";
 function changeTheme(team) {
   document.documentElement.style.setProperty(
     "--accent",
@@ -128,7 +129,7 @@ function App() {
                 <path d="M80-120v-80h800v80H80Zm40-120v-280h120v280H120Zm200 0v-480h120v480H320Zm200 0v-360h120v360H520Zm200 0v-600h120v600H720Z" />
               </svg>
               <span>Plots</span>
-            </button >
+            </button>
           </li>
           <li className="navbutton">
             <button onClick={handleDropdown} className="dropButton navigate">
@@ -157,7 +158,10 @@ function App() {
             <ul className="submenu">
               <div className="submenu-div">
                 <li className="submenu-item">
-                  <button  className="submenu_button" onClick={() => changeTheme("ferrari")}>
+                  <button
+                    className="submenu_button"
+                    onClick={() => changeTheme("ferrari")}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="24px"
@@ -171,7 +175,10 @@ function App() {
                   </button>
                 </li>
                 <li className="submenu-item">
-                  <button  className="submenu_button" onClick={() => changeTheme("mercedes")}>
+                  <button
+                    className="submenu_button"
+                    onClick={() => changeTheme("mercedes")}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="24px"
@@ -185,7 +192,10 @@ function App() {
                   </button>
                 </li>
                 <li className="submenu-item">
-                  <button  className="submenu_button" onClick={() => changeTheme("mclaren")}>
+                  <button
+                    className="submenu_button"
+                    onClick={() => changeTheme("mclaren")}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="24px"
@@ -330,22 +340,21 @@ function App() {
           <div className="box" style={{ gridArea: "schedule" }}>
             <Schedule />
           </div>
-          <div className="box" style={{ gridArea: "wdc" }}></div>
-          <div className="box" style={{ gridArea: "wcc" }}></div>
-          <div className="box" style={{ gridArea: "lastSession" }}></div>
+          <div className="box" style={{ gridArea: "wdc" }}>
+            <WDC />
+          </div>
+          <div className="box" style={{ gridArea: "wcc" }}>
+            <WCC />
+          </div>
+          <div className="box" style={{ gridArea: "lastSession" }}>
+            <LastSession />
+          </div>
           <div className="box" style={{ gridArea: "calendar" }}>
             <Calendar />
           </div>
           <div className="box" style={{ gridArea: "countdown" }}>
             <Countdown />
           </div>
-          <div className="box" style={{ gridArea: "weather" }}>
-            <Weather />
-          </div>
-          <div className="box" style={{ gridArea: "podium" }}>
-            <Podium />
-          </div>
-          <div className="box" style={{ gridArea: "test" }}></div>
         </div>
       </main>
     </div>

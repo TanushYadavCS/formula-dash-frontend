@@ -12,6 +12,16 @@
 .cal_gap {
   font-size: smaller;
 }
+.cal_dateRange, .cal_raceName{
+  background-color: var(--primary_adj);
+}
+
+.cal_currentRace > .cal_dateRange, .cal_currentRace > .cal_raceName{
+
+    background-color: var(--accent);
+
+  
+}
 
 .cal_dateRange {
   padding-top: 10px;
@@ -25,7 +35,6 @@
   width: 100%;
   background-color: var(--primary);
   margin-inline: auto;
-  position: sticky;
   top: 0;
   display: flex;
 }
@@ -44,6 +53,7 @@
   height: 100%;
   table-layout: fixed;
   border-collapse: collapse;
+  border-spacing: 2%;
 }
 
 .cal_raceName {

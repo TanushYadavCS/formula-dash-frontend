@@ -1,0 +1,61 @@
+import "./css/WDC.css";
+import axios from "axios";
+import { useState, useEffect } from "react";
+export default function WDC() {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    axios
+      .get("https://api.jolpi.ca/ergast/f1/2025/driverstandings/")
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+  return (
+    <div className="dc_content">
+      <div className="dc_header">
+        WDC <span className="dc_headerText">Standings</span>
+      </div>
+      <div className="dc_body">
+        {data ? (
+          data.MRData.StandingsTable.StandingsLists[0].DriverStandings.map(
+            (element) => {
+              return (
+                <div className="dc_element">
+                  <div
+                    className="dc_teamAccent"
+                    style={{
+                      backgroundColor: `var(--${element.Constructors[0].constructorId}-accent)`,
+                    }}
+                  ></div>
+                  <div className="dc_main">
+                    <div className="dc_pos">{element.positionText}</div>
+                
+                    <div className="dc_driverName">
+                      <span>
+                        {element.Driver.givenName}{" "}
+                        <span
+                          style={{
+                            color: `var(--${element.Constructors[0].constructorId}-accent)`,
+                          }}
+                        >
+                          {" "}
+                          {element.Driver.familyName}
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="dc_pts">{element.points} pts</div>
+                </div>
+              );
+            }
+          )
+        ) : (
+          <div>No data</div>
+        )}
+      </div>
+    </div>
+  );
+}
