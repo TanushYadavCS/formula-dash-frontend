@@ -98,6 +98,7 @@ button {
   transition: 300ms ease-in-out;
   .submenu_div{
     overflow: hidden;
+    height: 50%;
   }
 }
 
@@ -113,10 +114,6 @@ button {
   .dropdownsvg{
     rotate: 180deg;
   }
-}
-.submenu_div{
-  overflow: auto;
-  max-height: 500px;
 }
 .submenu-item{
   display: flex;
