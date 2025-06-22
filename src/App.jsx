@@ -167,7 +167,7 @@ function App() {
             </button>
 
             <ul className="submenu">
-              <div className="submenu-div">
+              <div className="submenu_div">
                 <li className="submenu-item">
                   <button
                     className="submenu_button"
