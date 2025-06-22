@@ -8,6 +8,12 @@ import Countdown from "./Components/Countdown";
 import LastSession from "./Components/LastSession";
 import WDC from "./Components/WDC";
 import WCC from "./Components/WCC";
+document.addEventListener("DOMContentLoaded", () => {
+const savedTheme = localStorage.getItem('preferredTeam');
+if (savedTheme) {
+  changeTheme(savedTheme);
+}
+});
 function changeTheme(team) {
   document.documentElement.style.setProperty(
     "--accent",
@@ -17,21 +23,28 @@ function changeTheme(team) {
     "--secondary-accent",
     `var(--${team}-sec)`
   );
+  localStorage.setItem("preferredTeam" ,team);
 }
 function handleToggle() {
   const toggleButton = document.getElementById("toggle-btn");
   const sidebar = document.getElementById("sidebar");
   const content = document.getElementById("content");
   toggleButton.classList.toggle("rotate");
-  sidebar.classList.toggle("close");
-  content.classList.toggle("close");
+  sidebar?.classList.toggle("close");
+  content?.classList.toggle("close");
 }
 
 function handleDropdown() {
+  event.stopPropagation();
   const dropdownSubmenu = document.getElementsByClassName("submenu")[0];
   const dropdownButton = document.getElementsByClassName("dropButton")[0];
+  const sidebar = document.getElementById("sidebar");
+  const content = document.getElementById("content");
   dropdownSubmenu.classList.toggle("show");
   dropdownButton.classList.toggle("show");
+  sidebar.classList.remove("close");
+  content.classList.remove("close");
+
 }
 function App() {
   const appRef = useRef(null);

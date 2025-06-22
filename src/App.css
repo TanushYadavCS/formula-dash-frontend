@@ -57,6 +57,26 @@ button {
   color: var(--text);
 }
 
+.fadeTop, .fadeBottom{
+  width: 100%;
+  height:12%;
+  position: sticky;
+  backdrop-filter: blur(100px);
+}
+
+
+.fadeBottom{
+  bottom: 0;
+  background: linear-gradient(to top, transparent, transparent);
+  mask: linear-gradient(to top, black, transparent);
+}
+
+.fadeTop{
+  top: 0;
+  mask: linear-gradient(to bottom, black, transparent);
+  background: linear-gradient(to bottom, transparent, transparent);
+}
+
 #sidebar {
   box-sizing: border-box;
   height: 100vh;
@@ -100,9 +120,14 @@ button {
   }
 }
 
+.box {
+  background-color: var(--primary);
+}
+
+
 .submenu_button{
   border: 0px;
-  background-color: var(--prim);
+  background-color: transparent;
   border-radius: 0.5em;
   text-decoration: none;
   display: flex;
@@ -110,9 +135,10 @@ button {
 }
 
 #sidebar button:hover {
-  background-color: var(--primary);
   cursor: pointer;
+  transition: 300ms ease-in-out;
 }
+
 
 #sidebar > ul {
   list-style: none;
@@ -218,10 +244,7 @@ main.close {
   font-size: 18px;
 }
 
-.box {
-  border-radius: 5px;
-  background-color: var(--primary);
-}
+
 
 @media (min-width: 1481px) and (max-width: 1758px) {
   .grid-container {
@@ -289,11 +312,9 @@ main.close {
     justify-content: center;
     gap: 15px;
   }
-
   .cc_element, .dc_element{
     font-size: smaller;
-    text-wrap: stable;
-    text-align: center;
+    text-align: center
   }
   .dc_pts, .cc_pts{
     flex: 1;
@@ -392,8 +413,7 @@ main.close {
   }
   .cc_element, .dc_element{
     font-size: smaller;
-    word-spacing: 30000px;
-    text-align: center;
+    text-align: center
   }
   .dc_pts, .cc_pts{
     flex: 1;
@@ -490,8 +510,7 @@ main.close {
   }
   .cc_element, .dc_element{
     font-size: smaller;
-    word-spacing: 30000px;
-    text-align: center;
+    text-align: center
   }
   .dc_pts, .cc_pts{
     flex: 1;
@@ -591,8 +610,7 @@ main.close {
   }
   .cc_element, .dc_element{
     font-size: smaller;
-    word-spacing: 30000px;
-    text-align: center;
+    text-align: center
   }
   .dc_pts, .cc_pts{
     flex: 1;
@@ -692,8 +710,7 @@ main.close {
   }
   .cc_element, .dc_element{
     font-size: smaller;
-    word-spacing: 30000px;
-    text-align: center;
+    text-align: center
   }
   .dc_pts, .cc_pts{
     flex: 1;
@@ -792,10 +809,13 @@ main.close {
     gap: 15px;
     font-size: 14px;
   }
+  .dc_driverName, .cc_constructorName{
+    word-spacing: 30000px;
+  }
+
   .cc_element, .dc_element{
     font-size: smaller;
-    word-spacing: 30000px;
-    text-align: center;
+    text-align: center
   }
   .dc_pts, .cc_pts{
     flex: 1;
@@ -895,8 +915,7 @@ main.close {
   }
   .cc_element, .dc_element{
     font-size: smaller;
-    word-spacing: 30000px;
-    text-align: center;
+    text-align: center
   }
   .dc_pts, .cc_pts{
     flex: 1;

@@ -7,36 +7,16 @@
   position: relative;
 }
 
-.cal_dateRange,
-.cal_raceName,
-.cal_gap {
-  font-size: smaller;
-}
-.cal_dateRange, .cal_raceName{
-  background-color: var(--primary_adj);
-}
 
-.cal_currentRace > .cal_dateRange, .cal_currentRace > .cal_raceName{
-
-    background-color: var(--accent);
-
-  
-}
-
-.cal_dateRange {
-  padding-top: 10px;
-  text-align: center;
-  text-wrap: balance;
-}
 .cal_header {
-  padding-top: 10px;
-  padding-bottom: 10px;
   text-align: center;
   width: 100%;
   background-color: var(--primary);
   margin-inline: auto;
   top: 0;
   display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .cal_heading {
@@ -47,48 +27,49 @@
 .cal_accentText {
   color: var(--accent);
 }
-
-.cal_table {
-  width: 100%;
-  height: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-  border-spacing: 2%;
-}
-
-.cal_raceName {
-  text-align: center;
-  color: var(--accent);
-  padding-bottom: 10px;
-}
-
-.cal_gapText {
-  background-color: var(--secondary);
-  padding: 0 10px;
-  color: var(--text);
-  border-radius: 25px;
-}
-
-.cal_currentRace {
-  background-color: var(--accent);
-  font-weight: bold;
-  color: var(--secondary-accent);
-  .cal_raceName {
-    color: var(--secondary-accent);
-  }
-}
-
-.cal_gap {
-  padding: 10px;
-  width: 100%;
-  text-align: center;
-}
-
 .cal_body {
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  position: relative;
+}
+.cal_element, .cal_gap{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 11%;
+  text-align: center;
+  align-items: center;
+  padding-block: 5%;
+  font-size: smaller;
+  
+}
+.cal_gapOf, .cal_name, .cal_dateRange{
+  margin: auto;
 }
 
+.cal_currentRace{
+  background-color: var(--accent);
+  color: var(--secondary-accent);
+  font-weight: bold;
+}
 
+.cal_otherRace{
+  background-color: var(--primary_adj);
+}
+
+.cal_otherRace > .cal_main > .cal_name{
+  color: var(--accent);
+}
+
+.cal_main{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.cal_gapOf{
+  padding-inline: 10px;
+  padding-block: 2px;
+  background-color: var(--secondary);
+  border-radius: 25px;
+}

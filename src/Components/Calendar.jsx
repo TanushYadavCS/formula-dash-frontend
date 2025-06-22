@@ -8,7 +8,7 @@ export default function Calendar() {
   const currentRace = getRace(circuits);
   const calRef = useRef(null);
   useEffect(() => {
-    calRef.current.scrollIntoView({ block: "start" });
+    calRef.current.scrollIntoView({ block: "center" });
   }, []);
   return (
     <div className="cal_content">
@@ -19,57 +19,36 @@ export default function Calendar() {
       </div>
 
       <div className="cal_body">
-        <table className="cal_table">
-          <tbody>
-            {calendar.map((element) =>
-              element.name ? (
-                <>
-                  <tr
-                    ref={currentRace.round == element.round ? calRef : null}
-                    id={`${
-                      currentRace.round == element.round
-                        ? "cal_currentRaceElement"
-                        : "cal_element"
-                    }`}
-                    className={`cal_row ${
-                      currentRace.round == element.round
-                        ? "cal_currentRace"
-                        : ""
-                    } `}
-                  >
-                    <td className="cal_dateRange" colSpan={2}>
-                      {formatLocalDateNoDay(element.startDate)} -{" "}
-                      {formatLocalDateNoDay(element.endDate)}
-                    </td>
-                  </tr>
-                  <tr
-                    className={`cal_row ${
-                      currentRace.round == element.round
-                        ? "cal_currentRace"
-                        : ""
-                    } `}
-                  >
-                    <td className="cal_raceName" colSpan={2}>
-                      <span className="cal_raceText">{element.name}</span>
-                    </td>
-                  </tr>
-                </>
-              ) : (
-                <>
-                  <tr>
-                    <td colSpan={2} className="cal_gap">
-                      <span className="cal_gapText">
-                        Break for {element.gap}{" "}
-                        {element.gap == 1 ? "Week" : "Weeks"}
-                      </span>
-                    </td>
-                  </tr>
-                </>
-              )
-            )}
-          </tbody>
-        </table>
-      </div>
+        <div className="fadeTop"></div>
+        {calendar.map((element) => {
+          return element.name ? (
+            <div
+              className={`cal_element ${
+                currentRace.round == element.round
+                  ? "cal_currentRace"
+                  : "cal_otherRace"
+              } `}
+              ref={currentRace.round == element.round ? calRef : null}
+            >
+              <div className="cal_main">
+                <div className="cal_name">{element.name}</div>
+                <div className="cal_dateRange">
+                  {formatLocalDateNoDay(element.startDate)} -{" "}
+                  {formatLocalDateNoDay(element.endDate)}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="cal_gap">
+              <div className="cal_gapOf">
+                <span>Break - </span>
+                {element.gap}
+                <span>{element.gap > 1 ? " weeks" : " week"}</span>
+              </div>
+            </div>
+          );
+        })}
+      <div className="fadeBottom"></div></div>
     </div>
   );
 }

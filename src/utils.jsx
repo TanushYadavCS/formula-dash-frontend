@@ -11,8 +11,9 @@ export function formatLocalDate(timeString) {
 export function formatLocalDateNoDay(timeString) {
   const date = new Date(timeString);
   const day = Intl.DateTimeFormat(undefined, {
+
     month: "short",
-    day: "numeric",
+    day: "2-digit",
   }).format(date);
   return day;
 }

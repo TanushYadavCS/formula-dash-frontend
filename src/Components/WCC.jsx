@@ -16,7 +16,7 @@ export default function WDC() {
   return (
     <div className="cc_content">
       <div className="cc_header">
-        WCC <span className="cc_headerText">Standings</span>
+        <span>WCC <span className="cc_headerText">Standings</span></span>
       </div>
       <div className="cc_body">
         {data ? (
@@ -50,7 +50,7 @@ export default function WDC() {
           )
         ) : (
           <div>No data</div>
-        )}
+        )}<div className="fadeBottom"></div>
       </div>
     </div>
   );

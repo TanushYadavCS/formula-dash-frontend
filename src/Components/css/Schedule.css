@@ -50,3 +50,11 @@
     padding: 10px;
     vertical-align: middle;
 }
+
+.sch_sessionName > span{
+    color: var(--accent);
+    padding-inline: 5px;
+    padding-block: 2px;
+    font-weight: bold;
+    border-radius: 10px;
+}

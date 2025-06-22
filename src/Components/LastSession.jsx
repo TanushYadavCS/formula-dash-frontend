@@ -67,7 +67,7 @@ export default function LastSession() {
                 : <tr><td>No data</td></tr>}
             </tbody>
           </table>
-        </div>
+        </div><div className="fadeBottom"></div>
       </div>
     </div>
   );

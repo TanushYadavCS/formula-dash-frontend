@@ -27,7 +27,7 @@ export default function Schedule(){
                 <tbody>
                  {Object.entries(currentRace.sessions).map(([sessionID, time]) => (
                     <tr className="sch_session">
-                        <td className="sch_sessionName">{sessionNames[sessionID]}</td>
+                        <td className="sch_sessionName"><span>{sessionNames[sessionID]}</span></td>
                         <td className="sch_sessionDate">{formatLocalDate(time)}<br /><span className="sch_sessionTime">{formatLocalTime(time)}</span></td>
                     </tr>
                  ))}

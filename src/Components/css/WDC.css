@@ -34,7 +34,7 @@
 .dc_element {
   width: 90%;
   margin-inline: auto;
-  height: 14%;
+  height: 12%;
   display: flex;
   flex-direction: row;
   margin-block: 5%;

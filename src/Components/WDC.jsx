@@ -16,7 +16,9 @@ export default function WDC() {
   return (
     <div className="dc_content">
       <div className="dc_header">
-        WDC <span className="dc_headerText">Standings</span>
+        <span>
+          WDC <span className="dc_headerText">Standings</span>
+        </span>
       </div>
       <div className="dc_body">
         {data ? (
@@ -32,10 +34,12 @@ export default function WDC() {
                   ></div>
                   <div className="dc_main">
                     <div className="dc_pos">{element.positionText}</div>
-                
+
                     <div className="dc_driverName">
                       <span>
-                        {element.Driver.givenName}{" "}
+                        {element.Driver.givenName == "Andrea Kimi"
+                          ? "Kimi"
+                          : element.Driver.givenName}{" "}
                         <span
                           style={{
                             color: `var(--${element.Constructors[0].constructorId}-accent)`,
@@ -55,6 +59,7 @@ export default function WDC() {
         ) : (
           <div>No data</div>
         )}
+        <div className="fadeBottom"></div>
       </div>
     </div>
   );
