@@ -36,14 +36,12 @@ function handleToggle() {
 
 function handleDropdown() {
   event.stopPropagation();
-  const dropdownSubmenu = document.getElementsByClassName("submenu")[0];
-  const dropdownButton = document.getElementsByClassName("dropButton")[0];
   const sidebar = document.getElementById("sidebar");
   const content = document.getElementById("content");
-  dropdownSubmenu.classList.toggle("show");
-  dropdownButton.classList.toggle("show");
-  sidebar.classList.remove("close");
-  content.classList.remove("close");
+  const dropdownSubmenu = document.getElementsByClassName("submenu")[0];
+  const dropdownButton = document.getElementsByClassName("dropButton")[0];
+  dropdownSubmenu.classList.toggle('show');
+  dropdownButton.classList.toggle('show');
 
 }
 function App() {
