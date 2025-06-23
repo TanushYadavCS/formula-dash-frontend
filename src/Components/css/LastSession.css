@@ -22,8 +22,6 @@
 .ls_raceName {
   width: 100%;
   text-align: center;
-  position: sticky;
-  top: 0;
   background-color: var(--primary);
   z-index: 30;
   font-size: smaller;
