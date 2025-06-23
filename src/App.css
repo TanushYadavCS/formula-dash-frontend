@@ -355,7 +355,6 @@ main.close {
       bottom: 60px;
       left: 0;
       box-sizing: border-box;
-      height: fit-content;
       width: 100%;
       background-color: rgba(0,0,0,0.5);
       backdrop-filter: blur(5px);
@@ -366,13 +365,13 @@ main.close {
       span{
         display: inline;
       }
-      .submenu-div{
-        overflow-x: auto;
-      }
       
       li{
         display: inline-flex;
       }
+    }
+    .submenu_div{
+      overflow-x: scroll;
     }
     ul {
       padding: 0;
@@ -454,7 +453,6 @@ main.close {
       bottom: 60px;
       left: 0;
       box-sizing: border-box;
-      height: fit-content;
       width: 100%;
       background-color: rgba(0,0,0,0.5);
       backdrop-filter: blur(5px);
@@ -465,12 +463,12 @@ main.close {
       span{
         display: inline;
       }
-      .submenu-div{
-        overflow-x: auto;
-      }
       li{
         display: inline-flex;
       }
+    }
+    .submenu_div{
+      overflow-x: scroll;
     }
     ul {
       padding: 0;
@@ -551,7 +549,6 @@ main.close {
       bottom: 60px;
       left: 0;
       box-sizing: border-box;
-      height: fit-content;
       width: 100%;
       background-color: rgba(0,0,0,0.5);
       backdrop-filter: blur(5px);
@@ -562,12 +559,12 @@ main.close {
       span{
         display: inline;
       }
-      .submenu-div{
-        overflow-x: auto;
-      }
       li{
         display: inline-flex;
       }
+    }
+    .submenu_div{
+      overflow-x: scroll;
     }
     ul {
       padding: 0;
@@ -651,7 +648,6 @@ main.close {
       bottom: 60px;
       left: 0;
       box-sizing: border-box;
-      height: fit-content;
       width: 100%;
       background-color: rgba(0,0,0,0.5);
       backdrop-filter: blur(5px);
@@ -662,12 +658,12 @@ main.close {
       span{
         display: inline;
       }
-      .submenu-div{
-        overflow-x: auto;
-      }
       li{
         display: inline-flex;
       }
+    }
+    .submenu_div{
+      overflow-x: scroll;
     }
     ul {
       padding: 0;
@@ -751,7 +747,6 @@ main.close {
       bottom: 60px;
       left: 0;
       box-sizing: border-box;
-      height: fit-content;
       width: 100%;
       background-color: rgba(0,0,0,0.5);
       backdrop-filter: blur(5px);
@@ -762,13 +757,12 @@ main.close {
       span{
         display: inline;
       }
-      .submenu-div{
-        overflow-x: auto;
-        height: fit-content;
-      }
       li{
         display: inline-flex;
       }
+    }
+    .submenu_div{
+      overflow-x: scroll;
     }
     ul {
       padding: 0;
@@ -856,7 +850,6 @@ main.close {
       bottom: 60px;
       left: 0;
       box-sizing: border-box;
-      height: fit-content;
       width: 100%;
       background-color: rgba(0,0,0,0.5);
       backdrop-filter: blur(5px);
@@ -867,12 +860,12 @@ main.close {
       span{
         display: inline;
       }
-      .submenu-div{
-        overflow-x: auto;
-      }
       li{
         display: inline-flex;
       }
+    }
+    .submenu_div{
+      overflow-x: scroll;
     }
     ul {
       padding: 0;

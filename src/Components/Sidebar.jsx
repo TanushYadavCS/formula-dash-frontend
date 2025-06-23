@@ -27,9 +27,6 @@ function handleToggle() {
 }
 
 function handleDropdown() {
-  event.stopPropagation();
-  const sidebar = document.getElementById("sidebar");
-  const content = document.getElementById("content");
   const dropdownSubmenu = document.getElementsByClassName("submenu")[0];
   const dropdownButton = document.getElementsByClassName("dropButton")[0];
   dropdownSubmenu.classList.toggle("show");
