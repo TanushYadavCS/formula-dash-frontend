@@ -70,6 +70,15 @@ button {
   mask: linear-gradient(to top, black, transparent);
 }
 
+.navigate{
+  color: var(--text);
+}
+.navigate.active{
+  color: var(--accent);
+  >svg{
+    fill: var(--accent);
+  }
+}
 .fadeTop{
   top: 0;
   mask: linear-gradient(to bottom, black, transparent);
@@ -98,7 +107,7 @@ button {
   transition: 300ms ease-in-out;
   .submenu_div{
     overflow: hidden;
-    height: 50%;
+    height: 90%;
   }
 }
 
@@ -107,7 +116,7 @@ button {
   overflow-y: scroll;
   .submenu_div{
     overflow-y: auto;
-    height: 50%;
+    height: 90%;
   }
 }
 .dropButton.show{
@@ -211,7 +220,6 @@ button {
     color: var(--accent);
   }
 }
-
 
 #sidebar ul li.active button {
   color: var(--accent);
