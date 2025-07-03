@@ -1,21 +1,12 @@
-import "./css/LastSession.css";
+import "../css/LastSession.css";
+import { useData } from "../context/DataContext";
 import axios from "axios";
 import circuits from "../data/circuits.json";
 import { useState, useEffect } from "react";
 import { getPreviousRace } from "../utils";
 export default function LastSession() {
-  const [data, setData] = useState(null);
+  const {lastSession} = useData();
   const prevRace = getPreviousRace(circuits);
-  useEffect(() => {
-    axios
-      .get(`https://api.jolpi.ca/ergast/f1/2025/${prevRace.round}/results`)
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
   return (
     <div className="ls_content">
       <div className="ls_header">
@@ -30,8 +21,8 @@ export default function LastSession() {
         <div className="ls_raceData">
           <table className="ls_table">
             <tbody>
-              {data
-                ? data.MRData.RaceTable.Races[0].Results.map((result) => {
+              {lastSession
+                ? lastSession.data.MRData.RaceTable.Races[0].Results.map((result) => {
                     return (
                       <tr className="ls_raceRow">
                         <td className="ls_racePos">{result.positionText}</td>
@@ -64,7 +55,16 @@ export default function LastSession() {
                       </tr>
                     );
                   })
-                : <tr><td>No data</td></tr>}
+                : <tr className="ls_raceRow">
+                <td className="ls_racePos">{"-"}</td>
+                <td className="ls_raceSvg">
+                </td>
+                <td className="ls_raceCode">{"-"}</td>
+                <td className="ls_raceStatus">
+                  {" "}
+                  {"-"}
+                </td>
+              </tr>}
             </tbody>
           </table>
         </div><div className="fadeBottom"></div>

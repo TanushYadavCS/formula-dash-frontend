@@ -1,0 +1,27 @@
+.stat_content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10%;
+}
+
+.stat_header, .stat_body, .stat_footer{
+    display: flex;
+    justify-content: start;
+    margin-inline: auto ;
+    margin-block: 1%;
+}
+
+.stat_header{
+    font-size: 80%;
+}
+
+.stat_body{
+    font-size: 100%;
+}
+
+.stat_footer{
+    font-size: 80%;
+}

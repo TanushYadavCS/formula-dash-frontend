@@ -1,18 +1,9 @@
-import "./css/WDC.css";
+import "../css/WDC.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { useData } from "../context/DataContext";
 export default function WDC() {
-  const [data, setData] = useState(null);
-  useEffect(() => {
-    axios
-      .get("https://api.jolpi.ca/ergast/f1/2025/driverstandings/")
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+  const {WDC} = useData();
   return (
     <div className="dc_content">
       <div className="dc_header">
@@ -21,8 +12,8 @@ export default function WDC() {
         </span>
       </div>
       <div className="dc_body">
-        {data ? (
-          data.MRData.StandingsTable.StandingsLists[0].DriverStandings.map(
+        {WDC ? (
+          WDC.data.MRData.StandingsTable.StandingsLists[0].DriverStandings.map(
             (element) => {
               return (
                 <div className="dc_element">

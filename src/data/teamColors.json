@@ -1,0 +1,12 @@
+{
+  "ferrari": { "primary": "#ed1131", "secondary": "#fffbeb", "accent": "#ed1131" },
+  "mclaren": { "primary": "#f47600", "secondary": "#000000", "accent": "#f47600" },
+  "red_bull": { "primary": "#091d3c", "secondary": "#ffffff", "accent": "#4781D7" },
+  "mercedes": { "primary": "#00d7b6", "secondary": "#020403", "accent": "#00d7b6" },
+  "williams": { "primary": "#1868db", "secondary": "#ffffff", "accent": "#1868db" },
+  "haas": { "primary": "#9c9fa2", "secondary": "#ee1b24", "accent": "#ffffff" },
+  "rb": { "primary": "#1534cc", "secondary": "#ffffff", "accent": "#6C98FF" },
+  "aston_martin": { "primary": "#229971", "secondary": "#ffffff", "accent": "#27ac80" },
+  "alpine": { "primary": "#fd4bc7", "secondary": "#ffffff", "accent": "#fd4bc7" },
+  "sauber": { "primary": "#00e600", "secondary": "#000000", "accent": "#00e600" }
+}

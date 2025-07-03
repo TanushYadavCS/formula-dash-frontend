@@ -1,26 +1,17 @@
-import "./css/WCC.css";
+import "../css/WCC.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { useData } from "../context/DataContext";
 export default function WDC() {
-  const [data, setData] = useState(null);
-  useEffect(() => {
-    axios
-      .get("https://api.jolpi.ca/ergast/f1/2025/constructorstandings/")
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+  const {WCC} = useData();
   return (
     <div className="cc_content">
       <div className="cc_header">
         <span>WCC <span className="cc_headerText">Standings</span></span>
       </div>
       <div className="cc_body">
-        {data ? (
-          data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings.map(
+        {WCC ? (
+          WCC.data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings.map(
             (element) => {
               return (
                 <div className="cc_element">

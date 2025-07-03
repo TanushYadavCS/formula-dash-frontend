@@ -67,20 +67,6 @@ export default function Sidebar() {
           </NavLink>
         </li>
         <li className="navbutton">
-          <NavLink to="/standings" className="navigate">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#ffffff"
-            >
-              <path d="M160-200h160v-320H160v320Zm240 0h160v-560H400v560Zm240 0h160v-240H640v240ZM80-120v-480h240v-240h320v320h240v400H80Z" />
-            </svg>
-            <span>Standings</span>
-          </NavLink>
-        </li>
-        <li className="navbutton">
           {" "}
           <NavLink to="/analysis" className="navigate">
             {" "}
@@ -137,16 +123,6 @@ export default function Sidebar() {
               <path d="M360-720h80v-80h-80v80Zm160 0v-80h80v80h-80ZM360-400v-80h80v80h-80Zm320-160v-80h80v80h-80Zm0 160v-80h80v80h-80Zm-160 0v-80h80v80h-80Zm160-320v-80h80v80h-80Zm-240 80v-80h80v80h-80ZM200-160v-640h80v80h80v80h-80v80h80v80h-80v320h-80Zm400-320v-80h80v80h-80Zm-160 0v-80h80v80h-80Zm-80-80v-80h80v80h-80Zm160 0v-80h80v80h-80Zm80-80v-80h80v80h-80Z" />
             </svg>
             <span>Theme</span>
-            <svg
-              className="dropdownsvg"
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#ffffff"
-            >
-              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
-            </svg>
           </button>
           <ul className="submenu">
             <div className="submenu_div">

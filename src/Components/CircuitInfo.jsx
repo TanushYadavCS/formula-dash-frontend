@@ -1,4 +1,4 @@
-import "./css/CircuitInfo.css";
+import "../css/CircuitInfo.css";
 import { useState, useEffect } from "react";
 import calendar from "../data/calendar.json";
 import circuits from "../data/circuits.json";

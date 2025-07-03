@@ -1,4 +1,4 @@
-import "./css/Countdown.css";
+import "../css/Countdown.css";
 import circuits from "../data/circuits.json";
 import { getRace} from "../utils";
 import CountdownComponent from 'react-countdown';

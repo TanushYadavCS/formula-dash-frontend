@@ -1,4 +1,4 @@
-import "./css/Calendar.css";
+import "../css/Calendar.css";
 import { useEffect, useRef } from "react";
 import { formatLocalDateNoDay } from "../utils";
 import calendar from "../data/calendar.json";

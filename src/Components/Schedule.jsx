@@ -1,4 +1,4 @@
-import "./css/Schedule.css";
+import "../css/Schedule.css";
 import { useState, useEffect } from "react";
 import circuits from "../data/circuits.json";
 import { formatLocalDate} from "../utils";

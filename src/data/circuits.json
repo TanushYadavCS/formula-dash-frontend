@@ -267,7 +267,7 @@
     "round": 12,
     "name": "British",
     "circuit": "Silverstone Circuit",
-    "map": "circuit_assets/great_britain.svg",
+    "map": "circuit_assets/united_kingdom.svg",
     "flag_path": "flag_assets/gb.svg",
     "weekend_type": "normal",
     "sessions": {

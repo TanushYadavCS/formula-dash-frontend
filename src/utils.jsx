@@ -11,7 +11,6 @@ export function formatLocalDate(timeString) {
 export function formatLocalDateNoDay(timeString) {
   const date = new Date(timeString);
   const day = Intl.DateTimeFormat(undefined, {
-
     month: "short",
     day: "2-digit",
   }).format(date);
@@ -139,3 +138,4 @@ export function calendarGenerator() {
   calendarArray = JSON.stringify(calendarArray);
   console.log(calendarArray);
 }
+
