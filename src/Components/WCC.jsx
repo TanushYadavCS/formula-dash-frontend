@@ -39,9 +39,26 @@ export default function WDC() {
               );
             }
           )
-        ) : (
-          <div>No data</div>
-        )}<div className="fadeBottom"></div>
+        ) : [...Array(20)].map((_, i) => (
+          <div className="cc_element">
+          <div
+            className="cc_teamAccent"
+            style={{
+              backgroundColor: `var(--primary_adj)`,
+            }}
+          ></div>
+          <div className="cc_main">
+            <div className="cc_pos">-</div>
+            <div className="cc_constructorName">
+              <span
+              >
+                {"-"}
+              </span>
+            </div>
+          </div>
+          <div className="cc_pts">-</div>
+        </div>
+        ))}<div className="fadeBottom"></div>
       </div>
     </div>
   );

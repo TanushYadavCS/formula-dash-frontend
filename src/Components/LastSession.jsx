@@ -55,7 +55,7 @@ export default function LastSession() {
                       </tr>
                     );
                   })
-                : <tr className="ls_raceRow">
+                : [...Array(20)].map((_,i) => (<tr className="ls_raceRow">
                 <td className="ls_racePos">{"-"}</td>
                 <td className="ls_raceSvg">
                 </td>
@@ -64,7 +64,7 @@ export default function LastSession() {
                   {" "}
                   {"-"}
                 </td>
-              </tr>}
+              </tr>))}
             </tbody>
           </table>
         </div><div className="fadeBottom"></div>

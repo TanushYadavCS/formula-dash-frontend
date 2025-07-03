@@ -47,9 +47,30 @@ export default function WDC() {
               );
             }
           )
-        ) : (
-          <div>No data</div>
-        )}
+        ) : [...Array(20)].map((_, i) => (
+          <div className="dc_element">
+                  <div
+                    className="dc_teamAccent"
+                    style={{
+                      backgroundColor: `var(--primary_adj)`,
+                    }}
+                  ></div>
+                  <div className="dc_main">
+                    <div className="dc_pos">-</div>
+
+                    <div className="dc_driverName">
+                      <span>
+                        {"-"}
+                        <span
+                        >
+                          {" "}
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="dc_pts">{"-"}</div>
+                </div>
+        ))}
         <div className="fadeBottom"></div>
       </div>
     </div>
