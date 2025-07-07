@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: space-around;
     border-radius: 10%;
+    margin-top: 10px;
 }
 
 .stat_header, .stat_body, .stat_footer{
@@ -12,14 +13,19 @@
     justify-content: start;
     margin-inline: auto ;
     margin-block: 1%;
+    word-wrap: break-word;
+    text-wrap: balance;
+    text-align: center;
 }
 
 .stat_header{
     font-size: 80%;
+    color: var(--tertiary);
 }
 
 .stat_body{
     font-size: 100%;
+    font-weight: bold;
 }
 
 .stat_footer{

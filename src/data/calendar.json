@@ -3,24 +3,26 @@
     "round": 1,
     "startDate": "2025-03-14",
     "endDate": "2025-03-16",
-    "name": "Australia",
+    "name": "Australian",
     "weekendType": "normal"
   },
+  { "gap": 1 },
   {
     "round": 2,
     "startDate": "2025-03-21",
     "endDate": "2025-03-23",
-    "name": "China",
+    "name": "Chinese",
     "weekendType": "sprint"
   },
-  { "gap": 1 },
+  { "gap": 2 },
   {
     "round": 3,
     "startDate": "2025-04-04",
     "endDate": "2025-04-06",
-    "name": "Japan",
+    "name": "Japanese",
     "weekendType": "normal"
   },
+  { "gap": 1 },
   {
     "round": 4,
     "startDate": "2025-04-11",
@@ -28,14 +30,15 @@
     "name": "Bahrain",
     "weekendType": "normal"
   },
+  { "gap": 1 },
   {
     "round": 5,
     "startDate": "2025-04-18",
     "endDate": "2025-04-20",
-    "name": "Saudi Arabia",
+    "name": "Saudi Arabian",
     "weekendType": "normal"
   },
-  { "gap": 1 },
+  { "gap": 2 },
   {
     "round": 6,
     "startDate": "2025-05-02",
@@ -43,14 +46,15 @@
     "name": "Miami",
     "weekendType": "sprint"
   },
-  { "gap": 1 },
+  { "gap": 2 },
   {
     "round": 7,
     "startDate": "2025-05-16",
     "endDate": "2025-05-18",
-    "name": "Imola",
+    "name": "Emilia-Romagna",
     "weekendType": "normal"
   },
+  { "gap": 1 },
   {
     "round": 8,
     "startDate": "2025-05-23",
@@ -58,67 +62,71 @@
     "name": "Monaco",
     "weekendType": "normal"
   },
+  { "gap": 1 },
   {
     "round": 9,
     "startDate": "2025-05-30",
     "endDate": "2025-06-01",
-    "name": "Spain",
-    "weekendType": "normal"
-  },
-  { "gap": 1 },
-  {
-    "round": 10,
-    "startDate": "2025-06-13",
-    "endDate": "2025-06-15",
-    "name": "Canada",
-    "weekendType": "normal"
-  },
-  { "gap": 1 },
-  {
-    "round": 11,
-    "startDate": "2025-06-27",
-    "endDate": "2025-06-29",
-    "name": "Austria",
-    "weekendType": "normal"
-  },
-  {
-    "round": 12,
-    "startDate": "2025-07-04",
-    "endDate": "2025-07-06",
-    "name": "Britain",
+    "name": "Spanish",
     "weekendType": "normal"
   },
   { "gap": 2 },
   {
-    "round": 13,
-    "startDate": "2025-07-25",
-    "endDate": "2025-07-27",
-    "name": "Belgium",
-    "weekendType": "sprint"
+    "round": 10,
+    "startDate": "2025-06-13",
+    "endDate": "2025-06-15",
+    "name": "Canadian",
+    "weekendType": "normal"
   },
+  { "gap": 2 },
   {
-    "round": 14,
-    "startDate": "2025-08-01",
-    "endDate": "2025-08-03",
-    "name": "Hungary",
+    "round": 11,
+    "startDate": "2025-06-27",
+    "endDate": "2025-06-29",
+    "name": "Austrian",
+    "weekendType": "normal"
+  },
+  { "gap": 1 },
+  {
+    "round": 12,
+    "startDate": "2025-07-04",
+    "endDate": "2025-07-06",
+    "name": "British",
     "weekendType": "normal"
   },
   { "gap": 3 },
   {
+    "round": 13,
+    "startDate": "2025-07-25",
+    "endDate": "2025-07-27",
+    "name": "Belgian",
+    "weekendType": "sprint"
+  },
+  { "gap": 1 },
+  {
+    "round": 14,
+    "startDate": "2025-08-01",
+    "endDate": "2025-08-03",
+    "name": "Hungarian",
+    "weekendType": "normal"
+  },
+  { "gap": 4 },
+  {
     "round": 15,
     "startDate": "2025-08-29",
     "endDate": "2025-08-31",
-    "name": "Netherlands",
+    "name": "Dutch",
     "weekendType": "normal"
   },
+  { "gap": 1 },
   {
     "round": 16,
     "startDate": "2025-09-05",
     "endDate": "2025-09-07",
-    "name": "Italy",
+    "name": "Italian",
     "weekendType": "normal"
   },
-  { "gap": 1 },
+  { "gap": 2 },
   {
     "round": 17,
     "startDate": "2025-09-19",
@@ -126,7 +134,7 @@
     "name": "Azerbaijan",
     "weekendType": "normal"
   },
-  { "gap": 1 },
+  { "gap": 2 },
   {
     "round": 18,
     "startDate": "2025-10-03",
@@ -134,7 +142,7 @@
     "name": "Singapore",
     "weekendType": "normal"
   },
-  { "gap": 1 },
+  { "gap": 2 },
   {
     "round": 19,
     "startDate": "2025-10-17",
@@ -142,22 +150,23 @@
     "name": "United States",
     "weekendType": "sprint"
   },
+  { "gap": 1 },
   {
     "round": 20,
     "startDate": "2025-10-24",
     "endDate": "2025-10-26",
-    "name": "Mexico",
+    "name": "Mexico City",
     "weekendType": "normal"
   },
-  { "gap": 1 },
+  { "gap": 2 },
   {
     "round": 21,
     "startDate": "2025-11-07",
     "endDate": "2025-11-09",
-    "name": "Brazil",
+    "name": "Brazilian",
     "weekendType": "sprint"
   },
-  { "gap": 1 },
+  { "gap": 2 },
   {
     "round": 22,
     "startDate": "2025-11-21",
@@ -165,6 +174,7 @@
     "name": "Las Vegas",
     "weekendType": "normal"
   },
+  { "gap": 1 },
   {
     "round": 23,
     "startDate": "2025-11-28",
@@ -172,6 +182,7 @@
     "name": "Qatar",
     "weekendType": "sprint"
   },
+  { "gap": 1 },
   {
     "round": 24,
     "startDate": "2025-12-05",

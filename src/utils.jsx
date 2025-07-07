@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import circuits from "./data/circuits.json";
 export function formatLocalDate(timeString) {
   const date = new Date(timeString);
   const day = Intl.DateTimeFormat(undefined, {
@@ -25,7 +26,7 @@ export function formatLocalTime(timeString) {
   }).format(date);
   return time;
 }
-export function getRace(circuits, raceDuration = 3) {
+export function getRace(circuits, raceDuration = 2) {
   const currentTime = new Date();
   return (
     circuits.find((circuit) => {
@@ -120,7 +121,7 @@ export function calendarGenerator() {
         differenceInWeeks(
           dateArray[roundNo].endDate,
           dateArray[roundNo + 1].endDate
-        ) - 1,
+        )
     });
     roundNo = roundNo + 1;
   }
@@ -136,6 +137,6 @@ export function calendarGenerator() {
     }
   }
   calendarArray = JSON.stringify(calendarArray);
-  console.log(calendarArray);
+  return calendarArray;
 }
 

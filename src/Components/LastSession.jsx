@@ -1,8 +1,6 @@
 import "../css/LastSession.css";
 import { useData } from "../context/DataContext";
-import axios from "axios";
 import circuits from "../data/circuits.json";
-import { useState, useEffect } from "react";
 import { getPreviousRace } from "../utils";
 export default function LastSession() {
   const {lastSession} = useData();
@@ -15,7 +13,7 @@ export default function LastSession() {
       <div className="ls_body">
         <div className="ls_raceName">
           <span>
-            {prevRace.name} <span className="ls_headerText">GP</span>
+             {lastSession ? lastSession.data.MRData.RaceTable.Races[0].raceName : ""}
           </span>
         </div>
         <div className="ls_raceData">
