@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../css/Dropdown.css";
 import axios from 'axios';
 export default function Dropdown({ availability, label, children=[], classname = "", onSelect}) {
@@ -9,15 +9,17 @@ export default function Dropdown({ availability, label, children=[], classname =
     setIsOpen((prev) => (!prev)) : setIsOpen((prev) => prev);
   }
   function getSelection({selection}){
-    setLabel(selection);
     onSelect?.(selection);
   }
+  useEffect(() => {
+    setLabel(label);
+  }, [label])
   return (
     <div
       className={`dropdown_parent ${isOpen ? "active" : ""} ${classname}`}
     >
       <div  onClick={toggleDropdown} className="dropdown_header">
-        <div>{newLabel}</div>
+        <div className="dropdown_label">{newLabel}</div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="24px"
