@@ -1,73 +1,7 @@
 .analysis_main {
   width: 100%;
-  height: 100%;
 }
 .an_body {
   width: 100%;
 }
 
-.an_scHeader {
-  text-align: center;
-  padding-block: 10px;
-  .an_scHeaderAccent {
-    font-weight: bold;
-    color: var(--accent);
-  }
-}
-
-
-.an_scBody{
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-evenly;
-  font-size: larger;
-}
-
-.an_scElement{
-  width: 15%;
-  min-width: 100px;
-}
-
-.available{
-  border: 1px solid var(--accent);
-  > .dropdown_header{
-    color: white;
-    > svg{
-      fill: white;
-    }
-  }
-}
-
-.an_fetchButton{
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.an_scFetchButton{
-  background-color: rgba(255, 255, 255, .15);
-  color: rgba(255, 255, 255, .4);
-  border: 0px;
-  border-radius: 25px;
-  padding: 10px;
-  font-weight: bold;
-  scale: 100%;
-  transition: 300ms ease-in-out;
-}
-
-.an_scFetchButton.active{
-  color: var(--secondary-accent);
-  background-color: var(--accent);
-}
-
-.an_scFetchButton.active:hover{
-  scale: 110%;
-  transition: 300ms ease-in-out;
-  cursor: pointer;
-}
-
-.an_scFetchButton:hover{
-  cursor: pointer;
-}

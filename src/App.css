@@ -40,7 +40,9 @@
   --text: #dee4ea;
   
   }
-
+*{
+  transition: 300ms ease-in-out;
+}
 .body {
   margin: 0;
   display: flex;
@@ -68,6 +70,7 @@ button {
   bottom: 0;
   background: linear-gradient(to top, transparent, transparent);
   mask: linear-gradient(to top, black, transparent);
+  pointer-events: none;
 }
 
 .navigate{

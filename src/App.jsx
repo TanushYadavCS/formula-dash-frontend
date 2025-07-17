@@ -4,7 +4,6 @@ import "./App.css";
 import Sidebar from "./Components/Sidebar";
 import Home from "./pages/Home";
 import Analysis from "./pages/Analysis";
-import Telemetry from "./pages/Telemetry";
 import Plots from "./pages/Plots";
 function App() {
   const appRef = useRef(null);
@@ -19,7 +18,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/analysis" element={<Analysis />} />
-            <Route path="/telemetry" element={<Telemetry />} />
             <Route path="/plots" element={<Plots />} />
           </Routes>
         </main>
