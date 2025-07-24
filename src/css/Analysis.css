@@ -1,7 +1,11 @@
 .analysis_main {
   width: 100%;
+  position: relative;
 }
 .an_body {
   width: 100%;
-}
+  margin-top: 40px;
+  position: relative;
+  display: flex;
 
+}

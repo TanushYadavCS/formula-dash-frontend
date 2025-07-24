@@ -23,13 +23,13 @@
   --mercedes-sec: #020403;
   --williams-sec: #ffffff;
   --haas-sec: #ee1b24;
-  --rb-sec: #ffffff;
+  --rb-sec: #000000;
   --aston_martin-sec: #ffffff;
   --alpine-sec: #ffffff;
   --sauber-sec: #000000;
   --ferrari-accent: #ed1131;
   --mclaren-accent: #f47600;
-  --red_bull-accent: #4781D7;
+  --red_bull-accent: #3765aa;
   --mercedes-accent: #00d7b6;
   --williams-accent: #1868db;
   --haas-accent: #ffffff;
@@ -42,6 +42,7 @@
   }
 *{
   transition: 300ms ease-in-out;
+  font-size: normal;
 }
 .body {
   margin: 0;
@@ -193,6 +194,7 @@ button {
   }
 }
  
+
 
 #sidebar > ul > li:first-child {
   display: flex;

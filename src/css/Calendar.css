@@ -9,6 +9,7 @@
 
 
 .cal_header {
+  font-size: smaller;
   text-align: center;
   width: 100%;
   background-color: var(--primary);

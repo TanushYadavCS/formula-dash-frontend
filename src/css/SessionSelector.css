@@ -1,66 +1,161 @@
 .an_scHeader {
-    text-align: center;
-    padding-block: 10px;
-    .an_scHeaderAccent {
-      font-weight: bold;
-      color: var(--accent);
-    }
-  }
-  
-  
-  .an_scBody{
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    font-size: larger;
-  }
-  
-  .an_scElement{
-    width: 15%;
-    min-width: 100px;
-  }
-  
-  .available{
-    border: 1px solid var(--accent);
-    transition: border 300ms ease-in-out;
-    > .dropdown_header{
-      color: white;
-      > svg{
-        fill: white;
-      }
-    }
-  }
-  
-  .an_fetchButton{
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-  }
-  
-  .an_scFetchButton{
-    background-color: rgba(255, 255, 255, .15);
-    color: rgba(255, 255, 255, .4);
-    border: 0px;
-    border-radius: 25px;
-    padding: 10px;
+  text-align: center;
+  padding-block: 10px;
+  .an_scHeaderAccent {
     font-weight: bold;
-    scale: 100%;
-    transition: 300ms ease-in-out;
+    color: var(--accent);
   }
-  
-  .an_scFetchButton.active{
-    color: var(--secondary-accent);
-    background-color: var(--accent);
+}
+
+.an_scBody {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: larger;
+
+}
+
+.an_scElement_Year,
+.an_scElement_GP,
+.an_scElement_Session {
+  width: 15%;
+  min-width: 100px;
+  position: absolute;
+  background-color: var(--background);
+  z-index: 100;
+}
+
+.an_scElement_Year {
+  top: 0;
+  left: 10%;
+}
+
+.an_scElement_GP {
+  top: 0;
+  left: 42.5%;
+}
+
+.an_scElement_Session {
+  top: 0;
+  right: 10%;
+}
+
+.available {
+  border: 1px solid var(--accent);
+  transition: border 300ms ease-in-out;
+  > .dropdown_header {
+    color: white;
+    > svg {
+      fill: white;
+    }
   }
-  
-  .an_scFetchButton.active:hover{
-    scale: 110%;
-    transition: 300ms ease-in-out;
+}
+
+.an_fetchButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.an_scFetchButton {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.4);
+  border: 0px;
+  border-radius: 25px;
+  padding: 10px;
+  font-weight: bold;
+  scale: 100%;
+  transition: 300ms ease-in-out;
+}
+
+.an_scFetchButton.active {
+  color: var(--secondary-accent);
+  background-color: var(--accent);
+}
+
+.an_scFetchButton.active:hover {
+  scale: 110%;
+  transition: 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.an_scFetchButton:hover {
+  cursor: pointer;
+}
+
+.an_sessionChoose {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+button.buttonUnavailable{
+  background-color: rgba(255,255,255, 0.1);
+  color: rgba(255,255,255,0.2);
+  border: 0px;
+  font-weight: bold;
+  width: 10%;
+  max-width: 300px;
+  min-width: 200px;
+  margin-top: 50px;
+  padding-block: 10px;
+  padding-inline: 20px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  > svg {
+    fill: rgba(255,255,255,0.2);
+  }
+}
+button.buttonAvailable{
+  background-color: var(--accent);
+  color: var(--secondary-accent);
+  border: 0px;
+  font-weight: bold;
+  width: 10%;
+  max-width: 300px;
+  min-width: 200px;
+  margin-top: 50px;
+  padding-block: 10px;
+  padding-inline: 20px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  > svg {
+    fill: var(--secondary-accent);
+  }
+ 
+}
+button.buttonAvailable:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.buttonAvailable:hover{
+  > button:hover {
     cursor: pointer;
+    transform: scale(1.05);
   }
-  
-  .an_scFetchButton:hover{
-    cursor: pointer;
+}
+
+.buttonLoading{
+  animation: pulse 1500ms ease-in-out infinite;
+  transition: 300ms ease-in-out;
+
+}
+@media (max-width: 768px) {
+  .an_scElement_Year,
+  .an_scElement_GP,
+  .an_scElement_Session {
+    position: static;
   }
+}
+
+@keyframes pulse{
+  0% { opacity: 1;}
+  50% {opacity: 0.5;}
+  100% {opacity: 1;}
+}

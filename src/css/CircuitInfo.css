@@ -16,6 +16,7 @@
   width: 100%;
   margin-inline: auto;
   top: 0;
+  font-size: smaller;
 }
 
 .ci_headerText{

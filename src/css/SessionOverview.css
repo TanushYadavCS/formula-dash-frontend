@@ -1,0 +1,56 @@
+.so_main {
+  width: 100%;
+  height: 100%;
+}
+
+.so_sessionInfo {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+.flag {
+  width: 10%;
+  height: 10%;
+  min-width: 40px;
+  margin-right: 50px;
+  margin-left: 100px;
+}
+
+.so_gpName {
+  display: flex;
+  align-items: center;
+  text-align: end;
+  width: 30%;
+}
+
+.so_gpLocation {
+  text-align: end;
+  font-size: smaller;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.6);
+}
+.so_header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.so_statistics {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.so_divider {
+  rotate: 90deg;
+  width: 90%;
+  height: 90%;
+  padding-top: 40px;
+  position: absolute;
+}
+
+.so_driver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}

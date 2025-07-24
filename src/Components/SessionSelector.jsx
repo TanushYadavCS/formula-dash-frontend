@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import Dropdown from "../Components/Dropdown";
 import Statistic from "../Components/Statistic";
+import { useStore } from "../context/store";
 import "../css/SessionSelector.css";
 import axios, { Axios } from "axios";
-export default function SessionSelector() {
+export default function SessionSelector({ onProceed }) {
   const currentYear = new Date().getFullYear();
   const yearList = [];
+  const [loading, setLoading] = useState(false);
   const [yearLabel, setYearLabel] = useState("Year");
   const [GPLabel, setGPLabel] = useState("GP");
   const [sessionLabel, setSessionLabel] = useState("Session");
@@ -13,6 +15,7 @@ export default function SessionSelector() {
   const [sessionList, setSessionList] = useState([]);
   const [selectedYear, setSelectedYear] = useState(null);
   const [selectedGP, setSelectedGP] = useState(null);
+  const [selectedRound, setSelectedRound] = useState(null);
   const [selectedSession, setSelectedSession] = useState(null);
   const [APIResponse, setAPIResponse] = useState(null);
   for (let i = currentYear; i > 2017; i--) {
@@ -27,7 +30,11 @@ export default function SessionSelector() {
     setSessionLabel("Session");
   }
   function getGP(GP) {
+    const GP_object = GPList.find(
+      (item) => item.raceName === GP.replaceAll("GP", "Grand Prix")
+    );
     setSelectedGP(GP);
+    setSelectedRound(GP_object.round);
     setGPLabel(GP);
     setSelectedSession(null);
     setSessionLabel("Session");
@@ -35,6 +42,18 @@ export default function SessionSelector() {
   function getSession(session) {
     setSelectedSession(session);
     setSessionLabel(session);
+  }
+  function handleClick() {
+    setLoading(true);
+    axios
+      .get(
+        `http://127.0.0.1:8000/api/session/${selectedYear}/${selectedRound}/${selectedSession}`
+      )
+      .then((response) => {
+        useStore.getState().setData(response.data);
+        setLoading(false);
+        
+      }).then(onProceed());
   }
   useEffect(() => {
     if (!selectedYear) return;
@@ -49,7 +68,7 @@ export default function SessionSelector() {
           const raceTimeUTC = new Date(`${gp.date}T${gp.time}`);
           const now = new Date();
           if (now > raceTimeUTC) {
-            apiGPList.push(gp.raceName.replaceAll("Grand Prix", "GP"));
+            apiGPList.push(gp);
           }
         });
         setGPList(apiGPList);
@@ -72,17 +91,16 @@ export default function SessionSelector() {
     if (sessionItem.Sprint) apiSessionList.push("Sprint");
     if (sessionItem.SecondPractice) apiSessionList.push("FP2");
     if (sessionItem.ThirdPractice) apiSessionList.push("FP3");
-    if (sessionItem.Qualifying) apiSessionList.push("Q");
+    if (sessionItem.Qualifying) apiSessionList.push("Qualifying");
     apiSessionList.push("Race");
     console.log(sessionItem);
     setSessionList(apiSessionList);
   }, [APIResponse, selectedGP]);
   return (
-    
-      <div className="an_body">
-        <div className="an_sessionChoose"></div>
+    <div className="an_body">
+      <div className="an_sessionChoose">
         <div className="an_scBody">
-          <div className="an_scElement">
+          <div className="an_scElement_Year">
             <Dropdown
               availability={true}
               classname={`year_dropdown available `}
@@ -91,16 +109,18 @@ export default function SessionSelector() {
               onSelect={getYear}
             />
           </div>
-          <div className="an_scElement">
+          <div className="an_scElement_GP">
             <Dropdown
               availability={selectedYear ? true : false}
               label={GPLabel}
-              children={GPList}
+              children={GPList.map((item) =>
+                item.raceName.replaceAll("Grand Prix", "GP")
+              )}
               onSelect={getGP}
               classname={`${selectedYear ? "available" : "unavailable"}`}
             />
           </div>
-          <div className="an_scElement">
+          <div className="an_scElement_Session">
             <Dropdown
               availability={selectedGP && APIResponse ? true : false}
               label={sessionLabel}
@@ -110,16 +130,27 @@ export default function SessionSelector() {
             />
           </div>
         </div>
-        <div className="an_fetchButton">
-          <button
-            className={
-              selectedSession ? "an_scFetchButton active" : "an_scFetchButton"
-            }
-          >
-            Proceed
-          </button>
-        </div>
         <div></div>
+        <button
+          className={`${
+            selectedSession ? "buttonAvailable" : "buttonUnavailable"
+          } ${loading ? "buttonLoading" : ""}`}
+          onClick={() => {
+            selectedSession ? handleClick() : "";
+          }}
+        >
+          <span>{loading == true ? "Loading..." : "Load Data"}</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#ffffff"
+          >
+            <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+          </svg>
+        </button>
       </div>
+    </div>
   );
 }

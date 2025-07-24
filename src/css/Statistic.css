@@ -10,17 +10,16 @@
 
 .stat_header, .stat_body, .stat_footer{
     display: flex;
-    justify-content: start;
-    margin-inline: auto ;
-    margin-block: 1%;
+    justify-content: center;
+    margin-block: 0.3%;
     word-wrap: break-word;
     text-wrap: balance;
-    text-align: center;
 }
 
 .stat_header{
-    font-size: 80%;
+    font-size: 90%;
     color: var(--tertiary);
+    font-weight: bold;
 }
 
 .stat_body{
@@ -29,5 +28,6 @@
 }
 
 .stat_footer{
-    font-size: 80%;
+    font-size: 90%;
 }
+

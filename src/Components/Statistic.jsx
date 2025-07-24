@@ -1,15 +1,15 @@
 import "../css/Statistic.css";
 export default function Statistic(props){
     return (
-        <div className="stat_content">
+        <div className={`stat_content ${props.className}`}>
             <div className="stat_header">
-                <span>{props.headerString}</span>
+                <div>{props.headerDiv}</div>
             </div>
             <div className="stat_body">
-                <span>{props.bodyString}</span>
+                <div>{props.bodyDiv}</div>
             </div>
             <div className="stat_footer">
-                <span>{props.footerString}</span>
+                <div>{props.footerDiv}</div>
             </div>
         </div>
     );

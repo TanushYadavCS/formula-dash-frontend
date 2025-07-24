@@ -2,7 +2,6 @@
   transition: border 300ms ease-in-out;
   border: 1px solid rgba(255,255,255,0.3);
   border-radius: 9px;
-  width: 100%;
   transition: max-height 300ms ease-in-out;
   font-size: small;
   text-align: center;
@@ -71,6 +70,10 @@
 .dropdown_option{
   margin: 0px;
   padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-inline: 10px;
 
 }
 
