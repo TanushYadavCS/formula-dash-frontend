@@ -15,7 +15,7 @@
 
 .co_background >img{
     position: absolute;
-    width: 90%;
+    width: 80%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -29,6 +29,7 @@
     width: 100%;
     font-size: smaller;
     margin-inline: auto;
+    z-index: 0;
     top: 0;
 }
 

@@ -65,9 +65,9 @@ export default function SessionSelector({ onProceed }) {
       .then((response) => {
         setAPIResponse(response.data);
         response.data.MRData.RaceTable.Races.map((gp) => {
-          const raceTimeUTC = new Date(`${gp.date}T${gp.time}`);
+          const firstPracticeUTC = new Date(`${gp.FirstPractice?.date}T${gp.FirstPractice?.time}`);
           const now = new Date();
-          if (now > raceTimeUTC) {
+          if (selectedYear < 2022 || now > firstPracticeUTC) {
             apiGPList.push(gp);
           }
         });
@@ -78,6 +78,7 @@ export default function SessionSelector({ onProceed }) {
       });
   }, [selectedYear]);
   useEffect(() => {
+    const now = new Date();
     if (!APIResponse || !selectedGP) return;
     setSelectedSession(null);
     const apiSessionList = [];
@@ -85,13 +86,24 @@ export default function SessionSelector({ onProceed }) {
       (gp) => gp.raceName == selectedGP.replaceAll("GP", "Grand Prix")
     );
     if (!sessionItem) return;
-    if (sessionItem.FirstPractice) apiSessionList.push("FP1");
-    if (sessionItem.SprintQualifying || sessionItem.SprintShootout)
+    const firstPracticeUTC = new Date(`${sessionItem.FirstPractice?.date}T${sessionItem.FirstPractice?.time}`);
+    const secondPracticeUTC = new Date(`${sessionItem.SecondPractice?.date}T${sessionItem.SecondPractice?.time}`);
+    const thirdPracticeUTC = new Date(`${sessionItem.ThirdPractice?.date}T${sessionItem.ThirdPractice?.time}`);
+    const sprintQualifyingUTC = new Date(`${sessionItem.SprintQualifying?.date}T${sessionItem.SprintQualifying?.time}`);
+    const sprintShootoutUTC = new Date(`${sessionItem.SprintShootout?.date}T${sessionItem.SprintShootout?.time}`);
+    const sprintUTC = new Date(`${sessionItem.Sprint?.date}T${sessionItem.Sprint?.time}`);
+    const qualifyingUTC = new Date(`${sessionItem.Qualifying?.date}T${sessionItem.Qualifying?.time}`);
+    const raceUTC = new Date(`${sessionItem.date}T${sessionItem.time}`);
+    if (sessionItem.FirstPractice && now > selectedYear < 2022 || firstPracticeUTC ) apiSessionList.push("FP1");
+    if (sessionItem.SprintQualifying && now > sprintQualifyingUTC)
       apiSessionList.push("SQ");
-    if (sessionItem.Sprint) apiSessionList.push("Sprint");
-    if (sessionItem.SecondPractice) apiSessionList.push("FP2");
-    if (sessionItem.ThirdPractice) apiSessionList.push("FP3");
-    if (sessionItem.Qualifying) apiSessionList.push("Qualifying");
+    if (sessionItem.Sprint && selectedYear < 2022 || now > sprintUTC ) apiSessionList.push("Sprint");
+    if (sessionItem.SecondPractice && selectedYear < 2022 || now > secondPracticeUTC) apiSessionList.push("FP2");
+    if (sessionItem.ThirdPractice && selectedYear < 2022 || now > thirdPracticeUTC) apiSessionList.push("FP3");
+    if (sessionItem.Qualifying && selectedYear < 2022 || now > qualifyingUTC) apiSessionList.push("Qualifying");
+    if (sessionItem.SprintShootout && selectedYear < 2022 || now > sprintShootoutUTC)
+      apiSessionList.push("Sprint Shootout")
+    if (now > raceUTC)
     apiSessionList.push("Race");
     console.log(sessionItem);
     setSessionList(apiSessionList);

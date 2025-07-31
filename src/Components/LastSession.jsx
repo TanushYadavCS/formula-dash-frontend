@@ -13,14 +13,14 @@ export default function LastSession() {
       <div className="ls_body">
         <div className="ls_raceName">
           <span>
-             {lastSession ? lastSession.data.MRData.RaceTable.Races[0].raceName.replaceAll("Grand Prix", "GP") : ""}
+             {lastSession ? lastSession?.data?.MRData?.RaceTable?.Races?.[0]?.raceName.replaceAll("Grand Prix", "GP") : ""}
           </span>
         </div>
         <div className="ls_raceData">
           <table className="ls_table">
             <tbody>
               {lastSession
-                ? lastSession.data.MRData.RaceTable.Races[0].Results.map((result) => {
+                ? lastSession?.data?.MRData?.RaceTable?.Races?.[0]?.Results?.map((result) => {
                     return (
                       <tr className="ls_raceRow">
                         <td className="ls_racePos">{result.positionText}</td>
